@@ -1,7 +1,7 @@
 # Proyecto_Final_2025
 
 Integrantes:
-- Bevacqa Mayra / mayrabevacqua@gmail.com
+- Bevacqua Mayra / mayrabevacqua@gmail.com
 - Beltramella Alex / beatsinka@gmail.com
 - Martorano Simon / simonmartorano@gmail.com
 - Fischer Diego / diegof01gm@gmail.com
