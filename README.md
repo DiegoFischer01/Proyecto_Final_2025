@@ -21,4 +21,6 @@ Link Trello: https://trello.com/b/i8JZ6kJe/basic-board
 
 Link Drive de Vivi: https://docs.google.com/spreadsheets/d/1vk_FE1fCL0Y_JTdr20FgdD9wB8lkP4XP3_N28-Cg61U/edit?gid=0#gid=0
 
+Link Figma:https://www.figma.com/design/SV0oD12vB9AnFIk2I20yNi/Viaggio?node-id=0-1&p=f
+
 
