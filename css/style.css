@@ -1,0 +1,32 @@
+/* Fondo de la página */
+body {
+    background-image: url(/Proyecto_Final_2025/Imagenes/mejorCalidad.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: hace que la imagen no se desplace */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Botón "Comenzar" */
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #e68a00;
+}
+
+/* Ajuste del botón "Registrarse" */
+.nav-link.btn-warning {
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+h1, p {
+    color: white;
+}
