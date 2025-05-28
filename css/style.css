@@ -30,3 +30,211 @@ body {
 h1, p {
     color: white;
 }
+
+
+
+/*html pagina 1*/
+/*TIUTLO Y SUBTITULO*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-pag1 {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 40px;
+}
+
+.seccion-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.seccion-texto h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.seccion-texto p {
+    color: #555;
+    font-size: 20px;
+}
+
+
+/*IMAGENES*/
+.cards-contenedor {
+    position: relative;
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 180px 200px;
+    gap: 15px;
+    width: 100%;
+}
+
+.img-card {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 310px;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 6px solid #f5f5f5;
+    animation: none; /*sin animacion por defecto para que se active con scroll*/
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: transform 0.5s ease, transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.img-card.clicked img {
+    transform: scale(1.5) rotateY(180deg);
+    opacity: 0;
+
+}
+
+/*OVERLAY2 TE LLEVA AL OTRO LINK CON TRANSICION DE PANTALLA EN NEGRO*/
+.pantalla-negra {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+.pantalla-negra.active {
+    opacity: 1;
+}
+
+
+/*OVERLAY PARA EL HOVER DE INFORMACION DE LAS IMAGENES*/
+.info-contenedor {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-left: 20px;
+    gap: 10px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition: transform 0.1s ease;
+    transform: translateY(100%);
+}
+
+.overlay h2 {
+    text-shadow: 5px 3px 7px rgba(0,0,0,0.61);
+}
+
+
+/*EFECTOS*/
+.img-card:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.img-card.animate {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.img-card:hover {
+    -webkit-box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48); 
+    box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48);
+    border-radius: 10%;
+    transition: 0.5s ease;
+    animation-play-state: paused;
+}
+
+
+
+.img-card:hover .info-contenedor {
+    opacity: 1;
+    transition: 0.8s ease;
+}
+
+.margen-inferior {
+    left:30px;
+}
+
+.img-card-top {
+    right: 30px;
+    opacity: 0.90;
+}
+
+.img-card-top:hover {
+    z-index: 2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img-card-top:hover .info-contenedor {
+    transform: translateY(0%);
+    z-index: 2;
+
+}
+
+.img-card-top ~ .img-card-bottom {
+    transform: scaleY(0.85);
+    transform-origin: top;
+
+}
+
+.img-card-bottom:hover .info-contenedor {
+    transform: translateY(0%);
+}
+
+.img-card-bottom:hover {
+    z-index: 1;
+    transform: scaleY(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.img-card-bottom ~ .img-card-top {
+    transform: scaleY(0.85);
+    transform-origin: bottom;
+}
+
+
+/*DELAY PROGESIVO PARA DARLE EFECTO DE OLA*/
+.img-card:nth-child(1){
+    animation-delay: 0s;
+}
+.img-card:nth-child(2){
+    animation-delay: 0.2s;
+}
+.img-card:nth-child(3){
+    animation-delay: 0.4s;
+}
+.img-card:nth-child(4){
+    animation-delay: 0.6s;
+}
+
+/*ANIMACION DE SALTOS*/
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }50% {
+        transform: translateY(-5px);
+    }
+}
