@@ -7,8 +7,6 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.remove("animate");
         }
     });
-}, {
-    threshold: 0.2 //SE ACTIVA CUANDO AL MENOS 20% DEL ELEMENTO ES VISIBLE
 });
 
 document.querySelectorAll(".img-card").forEach(box => {
