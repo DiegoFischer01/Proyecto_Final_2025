@@ -6,7 +6,7 @@ const observer = new IntersectionObserver(entries => {
         } else {
             entry.target.classList.remove("animate");
         }
-    });
+    })
 });
 
 document.querySelectorAll(".img-card").forEach(box => {
