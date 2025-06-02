@@ -15,6 +15,8 @@
     background-color: #ff9800;
     border: none;
     transition: 0.3s;
+    position: relative;
+    z-index: 2;
 }
 
 .btn-warning:hover {
@@ -38,6 +40,21 @@ h1, p {
     background-image: url(../Imagenes/mejorCalidad.jpg);
     background-position: center;
     background-size: cover;
+}
+.contenedor-inicio-info::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.contenedor-inicio h1, p {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
 
@@ -156,7 +173,7 @@ h1, p {
     cursor: pointer;
 }
 
-.img-card.animate {
+.img-card {
     animation: bounce 2s ease-in-out infinite;
 }
 
@@ -242,6 +259,33 @@ h1, p {
         transform: translateY(-5px);
     }
 }
+
+/*parallax*/
+.sec1 {
+    background: url(../Imagenes/mejorCalidad.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sec2 {
+    background: url(../Imagenes/mejorCalidad.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section {
+    width: 100%;
+    height: 65vh;
+}
+
+.contain {
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    text-align: center;
+}
+
 
 /*PAGINA 2*/
 
