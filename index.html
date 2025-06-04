@@ -14,10 +14,10 @@
 <body>
 
   <!-- Barra de navegación responsiva -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="mainNavbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Viaggio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -154,61 +154,36 @@
 </div>
   
   <!-- Pagina 2 -->
-  <section class="sec1">
-    <div class="contain"><p>hola</p></div>
-  </section>
+  <div class="parallax">
+    <section class="sec1">
+      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+    </section>
 
-  <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
-  <!-- START: Contenedor tarjetas -->
-  <div class="m-4 row row-cols-1 row-cols-md-3 g-5 ">
-    <div class="col">
-      <div class="card h-100 rounded-4">
-        <img src="./imagenes/home/Casa-del-Bicentenario.jpg" class="card-img-top rounded-top-4" alt="...">
-        <div class="card-body py-5">
-          <h5 class="card-title fs-3">Casa del bicentenario</h5>
-          <p class="card-text">Espacio cultural moderno que ofrece exposiciones, talleres y actividades para toda la
-            comunidad. Un punto de encuentro para el arte y la historia local.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn rounded-5" type="button">Visitar</button>
+    <!-- START: Contenedor tarjetas -->
+  <div class="conte">
+      <div class="casa-contenedor container-fluid bg-dark">
+        <div class="info">
+          <div class="info-h3-p">
+            <h3>HOLA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio dolorum id saepe voluptatibus. Laborum tenetur, dicta laboriosam ipsam earum quis assumenda molestias architecto at. Corporis ad reprehenderit dicta ut.</p>
+          </div>
+          <div class="ilustracion-contenedor">
+            <img src="./Imagenes/home/ilustracion-inicio.png" alt="">
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card h-100 rounded-4">
-        <img src="./imagenes/home/Teatro-Municipal.jpg" class="card-img-top rounded-top-4" alt="...">
-        <div class="card-body py-5">
-          <h5 class="card-title fs-3">Teatro municipal</h5>
-          <p class="card-text">Histórico escenario de la ciudad donde se presentan obras teatrales, conciertos y eventos
-            culturales. Un ícono de la vida artística olavarriense.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn rounded-5" type="button">Visitar</button>
-          </div>
-        </div>
-      </div>
+
+    <!-- END: Contenedor tarjetas -->
+    <div class="d-flex justify-content-center">
+      <button class="btn ver-mas-btn"> ✓ Ver más</button>
     </div>
-    <div class="col">
-      <div class="card h-100 rounded-4">
-        <img src="./imagenes/home/Museo-de-Ciencias.jpg" class="card-img-top rounded-top-4" alt="...">
-        <div class="card-body py-5">
-          <h5 class="card-title fs-3">Museo de las ciencias</h5>
-          <p class="card-text">Centro interactivo dedicado a la divulgación científica. Ideal para aprender jugando, con
-            propuestas educativas para todas las edades.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn rounded-5" type="button">Visitar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- END: Contenedor tarjetas -->
-  <div class="d-flex justify-content-center">
-    <button class="btn ver-mas-btn"> ✓ Ver más</button>
+
+    <section class="sec2">
+      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+    </section>
   </div>
 
-  <section class="sec2">
-    <div class="contain"><p>hola</p></div>
-  </section>
 
   <!-- ÚLTIMA PÁGINA -->
   <div class="contenedorp">
