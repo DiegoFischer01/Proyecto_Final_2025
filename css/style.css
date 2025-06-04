@@ -302,26 +302,37 @@ section h2 {
 
 /*PAGINA 2*/
 
-/* From Uiverse.io by eslam-hany */ 
 .casa-contenedor {
     width: 100%;
-    padding: 100px;
+    padding: 4rem;
     margin: 100px;
 }
 
 .info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
     padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .info h3, p {
     color: white;
 }
 
+.ilustracion-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
 .ilustracion-contenedor img{
-    width: 50vw;
-    height: 50vh;
+    width: 30vw;
+    height: 30vh;
     object-fit: cover;
 }
 
