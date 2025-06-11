@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background: #363434;
+    background: linear-gradient(208deg,rgba(54, 52, 52, 1) 61%, rgba(235, 100, 36, 1) 100%);
+}
+
+.inicio-sesion-contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inicio-sesion {
+    max-width: 1366px;
+    background-color: #4B4B4B;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    justify-content: center;
+    align-self: center;
+}
+
+.circle-contenedor {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    background-color: #EB6424;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.circle1 {
+    width: 15px;
+    height: 15px;
+    top: 40px;
+    left: 10px;
+}
+.circle2 {
+    width: 25px;
+    height: 25px;
+    top: 60px;
+    left: 40px;
+}
+.circle3 {
+    width: 10px;
+    height: 10px;
+    top: 15px;
+    left: 30px;
+}
+.circle4 {
+    width: 6px;
+    height: 6px;
+    top: 20px;
+    left: 60px;
+}
+
+.inicio-sesion-inputs h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-size: 2.2rem;
+}
+
+
+/* From Uiverse.io by Maximinodotpy */ 
+.inputGroup {
+    font-family: sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.inputBox {
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inputGroup input {
+    font-size: 100%;
+    padding: 0.5em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.inputGroup label {
+    width: 100%;
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #ffffff63;
+
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(1);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    color: #fff;  
+    background-color: #4B4B4B;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(250, 174, 33);
+}
+
+/*BOTONES*/
+.btn-inicio-sesion-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.btn-inicio-sesion-contenedor button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EB6424;
+    color: #fff;
+    font-size: 20px;
+}
+.btn-inicio-sesion-contenedor button:hover {
+    background-color: #ff9b6d;
+    color: #333333;
+    transition: 0.5s ease;
+}
+
+.a-inicio-sesion-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.a-inicio-sesion-contenedor a {
+    color: #f7a078;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.a-inicio-sesion-contenedor a:hover {
+    color: #fff;
+}
+
+/*IMAGEN*/
+.img-inicio-sesion-contenedor {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: end;
+}
+.img-inicio-sesion-contenedor img {
+    width: 100%;
+    height: 400px;
+    max-width: 600px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+
+/*MEDIA QUERY*/
+@media (max-width: 767.98px) {
+    .inicio-sesion {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .img-inicio-sesion-contenedor img {
+        display: none;
+    }
+
+    .inicio-sesion-inputs {
+        padding: 20px;
+    }
+
+    .circle-contenedor h2 {
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+
+    .circle {
+        margin-left: 0;
+    }
+
+    .btn-inicio-sesion-contenedor {
+        padding-bottom: 10px;
+    }
+
+    .circle-contenedor {
+        padding-bottom: 10px;
+    }
+
+    .inputGroup :is(input:focus, input:valid)~label {
+        width: 68%;
+    }
+}
+
+@media (max-width: 992px) {
+    .inicio-sesion {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .img-inicio-sesion-contenedor img {
+        display: none;
+    }
+
+    .inicio-sesion-inputs {
+        padding: 10px;
+    }
+
+    .circle-contenedor h2 {
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+
+    .circle {
+        margin-left: 0;
+    }
+
+    .btn-inicio-sesion-contenedor {
+        padding-bottom: 10px;
+    }
+
+    .circle-contenedor {
+        padding-bottom: 10px;
+    }
+
+    .inputGroup :is(input:focus, input:valid)~label {
+        width: 68%;
+    }
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viaggio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+  <!-- Barra de navegación responsiva -->
+  <nav class="navbar-contenedor navbar-expand-lg navbar-dark bg-transparent fixed-top" id="mainNavbar">
+    <div class="navbar container">
+      <a class="navbar-brand" href="#">Viaggio</a>
+      <button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-ul-contenedor collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre Viaggio</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning nav-link text-white" href="./paginas/registrarse.html">Registrarse</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección principal con Bootstrap Grid -->
+  <div class="contenedor-inicio-info container-fluid ">
+    <div class="row justify-content-center align-items-center contenedor-inicio">
+      <div class="col-lg-8 text-center">
+        <h1 class="display-3">Una mejor experiencia de viaje</h1>
+        <p class="fs-4">Tu itinerario personalizado a donde sea que vayas</p>
+        <button class="btn btn-warning btn-lg">Comenzar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!--PAGINA 1-->
+  <div class="contenedor-pag1 container">
+        <div class="seccion-texto">
+          <h2>Visita nuevos lugares</h2>
+          <p>Lo mejor de la ciudad en la palma de tus manos</p>
+        </div>
+
+        <div class="cards-contenedor">
+          <div class="img-card img-card-top" data-link="./pagina1.html">
+            <img src="./Imagenes/home/iglesia-san-jose.png" class="img top" alt="">
+            <div class="info-contenedor">
+              <h2>Parque Mitre</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+            </div>
+          </div>
+
+          <div class="img-card img-card-top ">
+            <img src="./imagenes/home/la-maxima.jpg" class="img top" alt="">
+            <div class="info-contenedor">
+              <h2>Parque Mitre</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+            </div>
+          </div>
+
+          <div class="img-card margen-inferior img-card-bottom">
+            <img src="./Imagenes/home/museo-emiliozzi.jpg" class="img buttom" alt="">
+            <div class="info-contenedor">
+              <h2>Parque Mitre</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+            </div>
+          </div>
+
+          <div class="img-card margen-inferior img-card-bottom">
+            <img src="./Imagenes/home/parque-mitre.jpg" class="img buttom" alt="">
+            <div class="info-contenedor">
+              <h2>Parque Mitre</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+            </div>
+          </div>
+      </div>  
+
+    <div class="pantalla-negra" id="pantalla-negra"></div>
+
+  </div>
+
+
+  <!--ACORDEON DE PAG1 SOLO PARA CELULARES-->
+<div class="accordion container pt-5 d-block d-md-none" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        La Maxima 
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <img src="./Imagenes/home/la-maxima.jpg" class="img-fluid" alt="">
+      <div class="accordion-body">
+        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Museo Hermanos Emiliozzi
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <img src="./Imagenes/home/museo-emiliozzi.jpg" class="img-fluid" alt="">
+      <div class="accordion-body">
+        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Parque Mitre
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <img src="./Imagenes/home/parque-mitre.jpg" class="img-fluid" alt="">
+      <div class="accordion-body">
+        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Iglesia San José
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <img src="./Imagenes/home/iglesia-san-jose.png" class="img-fluid" alt="">
+      <div class="accordion-body">
+        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+
+
+</div>
+  
+  <!-- Pagina 2 -->
+  <div class="parallax">
+    <section class="sec1">
+      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+    </section>
+
+    <!-- SOBRE VIAGGIO -->
+  <div class="conte">
+      <div class="casa-contenedor container-fluid bg-dark">
+        <div class="info">
+          <div class="info-h3-p">
+            <h3>HOLA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio dolorum id saepe voluptatibus. Laborum tenetur, dicta laboriosam ipsam earum quis assumenda molestias architecto at. Corporis ad reprehenderit dicta ut.</p>
+            <button id="btn-conocerMas">Conocer más</button>
+          </div>
+          <div class="ilustracion-contenedor">
+            <img src="./Imagenes/home/ilustracion-inicio.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sec2">
+      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+    </section>
+  </div>
+
+
+
+
+  <!--SECCION MAPA DE LA CIUDAD-->
+  <div class="mapa-contenedor">
+    <div id="mapa" class="mapa">
+    </div>
+    <h2 class="mx-5 h2-pag2">Mapa de la ciudad</h2>
+
+  </div>
+
+  <!-- ÚLTIMA PÁGINA -->
+  <div class="carousel-contenedor container">
+    <div class="carrusel">
+      <div id="carouselExampleCaptions" class="carrusel-info carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+
+        <div class="img-carousel-contenedor carousel-inner">
+          <div class="carousel-item active">
+            <img src="./Imagenes/home/centrocultural.jpg" class="d-block w-100" alt="Centro Cultural San José"
+              height="550" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Centro cultural San José</h5>
+              <p>Riobamba 2949</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes/home/mitre.jpg" class="d-block w-100" alt="Parque Mitre" height="550" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Parque Mitre</h5>
+              <p>Almte. Brown 2828</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes/home/parqueHeliosE.png" class="d-block w-100" alt="Parque Helios Eseverri"
+              height="550" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Parque Helios Eseverri</h5>
+              <p>Av. de los Trabajadores Norte</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- ÚLTIMA PÁGINA -->
+
+  <!-- FOOTER -->
+  <footer class="">
+    <div>
+      <img src="./imagenlogo" alt="Logo" class="logoFooter" />
+    </div>
+    <div class="divSucursales">
+      <p>Sucursales</p>
+      <p>Calle inventada 1234</p>
+      <p>Calle alternativa 5679</p>
+    </div>
+    <div class="divHorarios">
+      <p class="horarios">Horarios de atención:</p>
+      <p>Lunes a sábados</p>
+      <p>8:00 a 20:00hs</p>
+    </div>
+    <div class="divRedes">
+      <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
+        <img src="./Imagenes/home/facebook.png" alt="Facebook" class="logosRedes" />
+      </a>
+      <a href="https://x.com/" target="_blank">
+        <img src="./Imagenes/home/twitter.png" alt="Twitter" class="logosRedes" />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="./Imagenes/home/instagram.png" alt="Instagram" class="logosRedes" />
+      </a>
+    </div>
+  </footer>
+  <!-- FOOTER -->
+
+
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,507 @@
+/* Fondo de la página */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Barra de navegación */
+.navbar-contenedor {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.navbar {
+    max-width: 1366px;
+}
+
+.navbar-ul-contenedor ul{
+    gap: 30px;
+}
+
+#mainNavbar {
+    transition: background-color 0.3s ease;
+}
+
+/* Botón "Comenzar" */
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-warning:hover {
+    background-color: #e68a00;
+}
+
+/* Ajuste del botón "Registrarse" */
+.nav-link.btn-warning {
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+h1, p {
+    color: white;
+}
+
+.contenedor-inicio {
+    height: 100vh;
+}
+
+.contenedor-inicio-info {
+    background-image: url(../Imagenes/mejorCalidad.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.contenedor-inicio-info::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.contenedor-inicio h1, p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+/*html pagina 1*/
+/*TIUTLO Y SUBTITULO*/
+
+.contenedor-pag1 {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 40px;
+    padding-top: 50px;
+}
+
+.seccion-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.seccion-texto h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.seccion-texto p {
+    color: #555;
+    font-size: 20px;
+}
+
+
+/*IMAGENES*/
+.cards-contenedor {
+    position: relative;
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 180px 200px;
+    gap: 15px;
+    width: 100%;
+}
+
+.img-card {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 310px;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 6px solid #f5f5f5;
+    animation: none; /*sin animacion por defecto para que se active con scroll*/
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: transform 0.5s ease, transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.img-card.clicked img {
+    transform: scale(1.5) rotateY(180deg);
+    opacity: 0;
+
+}
+
+/*OVERLAY2 TE LLEVA AL OTRO LINK CON TRANSICION DE PANTALLA EN NEGRO*/
+.pantalla-negra {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+.pantalla-negra.active {
+    opacity: 1;
+}
+
+
+/*OVERLAY PARA EL HOVER DE INFORMACION DE LAS IMAGENES*/
+.info-contenedor {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-left: 20px;
+    gap: 10px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition: transform 0.1s ease;
+    transform: translateY(100%);
+}
+
+.overlay h2 {
+    text-shadow: 5px 3px 7px rgba(0,0,0,0.61);
+}
+
+
+/*EFECTOS*/
+.img-card:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.img-card {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.img-card:hover {
+    -webkit-box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48); 
+    box-shadow: 10px 10px 23px 1px rgba(0,0,0,0.48);
+    border-radius: 10%;
+    transition: 0.5s ease;
+    animation-play-state: paused;
+}
+
+
+
+.img-card:hover .info-contenedor {
+    opacity: 1;
+    transition: 0.8s ease;
+}
+
+.margen-inferior {
+    left:30px;
+}
+
+.img-card-top {
+    right: 30px;
+    opacity: 0.90;
+}
+
+.img-card-top:hover {
+    z-index: 2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img-card-top:hover .info-contenedor {
+    transform: translateY(0%);
+    z-index: 2;
+
+}
+
+.img-card-top ~ .img-card-bottom {
+    transform: scaleY(0.85);
+    transform-origin: top;
+
+}
+
+.img-card-bottom:hover .info-contenedor {
+    transform: translateY(0%);
+}
+
+.img-card-bottom:hover {
+    z-index: 1;
+    transform: scaleY(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.img-card-bottom ~ .img-card-top {
+    transform: scaleY(0.85);
+    transform-origin: bottom;
+}
+
+
+/*DELAY PROGESIVO PARA DARLE EFECTO DE OLA*/
+.img-card:nth-child(1){
+    animation-delay: 0s;
+}
+.img-card:nth-child(2){
+    animation-delay: 0.2s;
+}
+.img-card:nth-child(3){
+    animation-delay: 0.4s;
+}
+.img-card:nth-child(4){
+    animation-delay: 0.6s;
+}
+
+/*ANIMACION DE SALTOS*/
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }50% {
+        transform: translateY(-5px);
+    }
+}
+
+/*parallax*/
+.sec1 {
+    background: url(../Imagenes/mejorCalidad.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sec1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, #ffff 0%, transparent 100%);
+
+}
+
+
+.sec2 {
+    background: url(../Imagenes/mejorCalidad.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sec2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 10%, #ffff 100%);
+}
+
+
+section {
+    width: 100%;
+    height: 50vh;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+section h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.parallax {
+    padding-top: 200px;
+}
+
+
+/*PAGINA 2*/
+
+.casa-contenedor {
+    width: 100%;
+    height: 400px;
+    padding: 4rem;
+}
+
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2fr;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.info h3, p {
+    color: white;
+}
+
+.ilustracion-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ilustracion-contenedor img{
+    width: 35vw;
+    height: 35vh;
+    object-fit: cover;
+}
+
+
+/*MAPA*/
+.mapa-contenedor {
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa {
+    max-width: 1366px;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Mayra - Última pantalla y footer*/
+.carousel-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+}
+
+
+.carrusel {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    height: 600px;
+    padding: 10px;
+    background: transparent;
+    align-content: center;
+    justify-content: center;
+}
+
+.carousel-item img{
+    border-radius: 20px;
+}
+
+.img-carousel-contenedor img {
+    object-fit: cover;
+}
+
+aside {
+    width: 400px;
+    height: 600px;
+    margin: 5px 5px 5px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    padding: 30px;
+    background: #333334;
+    color: #fff;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.logoFooter {
+    width: 250px;
+    height: auto;
+}
+
+.divSucursales,
+.divHorarios,
+.divRedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    margin: 0 20px;
+}
+
+.divSucursales p,
+.divHorarios p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.divRedes {
+    flex-direction: row;
+    height: 110px;
+    margin-top: 15px;
+}
+
+.logosRedes {
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.logosRedes:hover {
+    transform: scale(1.3);
+}
+/*Mayra - Última pantalla y footer*/
+
+
+
+/*BREAKPOINT PAG1*/
+@media (max-width: 767.98px) {
+    .contenedor-pag1 {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .contenedor-pag1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
