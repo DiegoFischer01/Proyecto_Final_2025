@@ -31,3 +31,16 @@ window.addEventListener("scroll",
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 
+//MAPA DE OLAVARRIA LEATLET
+const olavarriaCordenadas = [-36.8933, -60.3225];
+const mapa = L.map(`mapa`).setView(olavarriaCordenadas, 13) //13 es un buen zoom para ciudad
+
+//CARGAR MAPA
+L.tileLayer(`https://tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+    attribution: `&copy; OpenStreetMap contributors`
+}).addTo(mapa);
+
+//AGREGAR MARCADOR
+L.marker(olavarriaCordenadas).addTo(mapa)
+    .bindPopup(`Olavarria, Buenos Aires, Argentina`)
+    .openPopup();

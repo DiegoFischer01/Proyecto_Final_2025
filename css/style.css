@@ -1,13 +1,28 @@
 /* Fondo de la página */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* Barra de navegación */
-.navbar {
+.navbar-contenedor {
     background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.navbar {
+    max-width: 1366px;
+}
+
+.navbar-ul-contenedor ul{
+    gap: 30px;
 }
 
 #mainNavbar {
@@ -271,6 +286,17 @@ h1, p {
     background-size: cover;
     background-attachment: fixed;
 }
+.sec1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, #ffff 0%, transparent 100%);
+
+}
+
 
 .sec2 {
     background: url(../Imagenes/mejorCalidad.jpg);
@@ -278,6 +304,16 @@ h1, p {
     background-size: cover;
     background-attachment: fixed;
 }
+.sec2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 10%, #ffff 100%);
+}
+
 
 section {
     width: 100%;
@@ -304,13 +340,15 @@ section h2 {
 
 .casa-contenedor {
     width: 100%;
+    height: 400px;
     padding: 4rem;
-    margin: 100px;
 }
+
 
 .info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2fr;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -331,33 +369,57 @@ section h2 {
 
 
 .ilustracion-contenedor img{
-    width: 30vw;
-    height: 30vh;
+    width: 35vw;
+    height: 35vh;
     object-fit: cover;
 }
 
-/*Mayra - Última pantalla y footer*/
-.contenedorp {
+
+/*MAPA*/
+.mapa-contenedor {
+    width: 100%;
+    padding: 4rem;
     display: flex;
-    justify-content: space-around;
-    width: 95%;
-    padding: 15px;
-    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenedor {
+.mapa {
+    max-width: 1366px;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Mayra - Última pantalla y footer*/
+.carousel-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+}
+
+
+.carrusel {
     display: flex;
     flex-direction: column;
-    width: 900px;
+    width: 1100px;
     height: 600px;
     padding: 10px;
-    margin: 5px 15px 5px 5px;
-    border-radius: 20px;
     background: transparent;
-    text-align: justify;
-    line-height: 1;
-    justify-content: space-around;
     align-content: center;
+    justify-content: center;
+}
+
+.carousel-item img{
+    border-radius: 20px;
+}
+
+.img-carousel-contenedor img {
+    object-fit: cover;
 }
 
 aside {
