@@ -24,10 +24,10 @@
       <div class="navbar-ul-contenedor collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Destinos</a>
+            <a class="nav-link" href="./paginas/destinos.html">Destinos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre Viaggio</a>
+            <a class="nav-link" href="./paginas/sobreViaggio.html">Sobre Viaggio</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-warning nav-link text-white" href="./paginas/registrarse.html">Registrarse</a>
@@ -53,6 +53,7 @@
   <div class="contenedor-pag1 container">
         <div class="seccion-texto">
           <h2>Visita nuevos lugares</h2>
+          <hr>
           <p>Lo mejor de la ciudad en la palma de tus manos</p>
         </div>
 
@@ -96,7 +97,7 @@
 
 
   <!--ACORDEON DE PAG1 SOLO PARA CELULARES-->
-<div class="accordion container pt-5 d-block d-md-none" id="accordionExample">
+<div class="acordeon-contenedor accordion container pt-5 d-block d-md-none" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -157,15 +158,16 @@
   <!-- Pagina 2 -->
   <div class="parallax">
     <section class="sec1">
-      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+      <h2 class="mx-5 h2-pag2"> VIAGGIO</h2>
     </section>
 
     <!-- SOBRE VIAGGIO -->
-  <div class="conte">
+    <div class="conte">
       <div class="casa-contenedor container-fluid bg-dark">
         <div class="info">
           <div class="info-h3-p">
             <h3>HOLA</h3>
+            <hr class="hr-sobreviaggio">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio dolorum id saepe voluptatibus. Laborum tenetur, dicta laboriosam ipsam earum quis assumenda molestias architecto at. Corporis ad reprehenderit dicta ut.</p>
             <button id="btn-conocerMas">Conocer más</button>
           </div>
@@ -177,7 +179,7 @@
     </div>
 
     <section class="sec2">
-      <h2 class="mx-5 h2-pag2">Explora nuevos lugares</h2>
+      <h2 class="mx-5 h2-pag2">VIAGGIO</h2>
     </section>
   </div>
 
@@ -191,9 +193,73 @@
     <h2 class="mx-5 h2-pag2">Mapa de la ciudad</h2>
 
   </div>
+  
+  <!--SECCION COMENTARIOS-->
+    <div class="draggable-container">
+    
+        <div class="drop-zone zone" id="drop-zone">
+            <div class="zona-aqui">SUELTE EL COMENTARIO AQUÍ</div>
+        </div>
 
+        <div id="mensaje" class="msj"></div>
+
+        <div class="zone drg-zone container" id="zona-origen">
+            <div class="drg" id="draggable1" draggable="true">
+                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <div class="drg-estrellas">
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                </div>
+            </div>
+            <div class="drg" id="draggable2" draggable="true">
+                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                  <div class="drg-estrellas">
+                    <p>★</p>
+                    <p>★</p>
+                    <p>★</p>
+                    <p>★</p>
+                    <p>★</p>
+                  </div>
+            </div>
+            <div class="drg" id="draggable3" draggable="true">
+                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <div class="drg-estrellas">
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                </div>
+            </div>
+            <div class="drg" id="draggable4" draggable="true">
+                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <div class="drg-estrellas">
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                </div>                
+            </div>
+            <div class="drg" id="draggable5" draggable="true">
+                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <div class="drg-estrellas">
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                  <p>★</p>
+                </div>               
+            </div>
+            
+        </div>
+    </div>
+    
   <!-- ÚLTIMA PÁGINA -->
-  <div class="carousel-contenedor container">
+  <div class="carousel-contenedor container-fluid">
     <div class="carrusel">
       <div id="carouselExampleCaptions" class="carrusel-info carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -282,10 +348,11 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
+      <script src="./js/main.js" defer></script>
+
 
 </body>
 
