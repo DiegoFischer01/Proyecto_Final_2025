@@ -231,3 +231,22 @@ function setupDrop(zone) {
 setupDrop(zonaOrigen);
 setupDrop(dropZone);
 
+
+
+
+//parallax para parallax
+const title = document.getElementById("parallax-texto");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const offsetX = scrollY * 0.3;
+    title.style.transform = `translateX(${offsetX}px)`
+});
+
+const title2 = document.getElementById("parallax-texto2");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const offsetX = scrollY * -0.3;
+    title2.style.transform = `translateX(${offsetX}px)`
+});

@@ -1,6 +1,10 @@
 /* Fondo de la página */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+body {
+    background-color: #dfdfdf79;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +14,7 @@
     font-weight: 300;
     font-style: normal;
 }
+
 
 /* Barra de navegación */
 .navbar-contenedor {
@@ -281,6 +286,8 @@ h1, p {
     background-position: bottom center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
 }
 .sec1::before {
     content: "";
@@ -310,6 +317,9 @@ h1, p {
     background-position: bottom center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+
 }
 .sec2::before {
     content: "";
@@ -341,16 +351,24 @@ section {
     align-items: center;
     justify-content: center;
     color: #fff;
+    overflow: hidden;
 }
 
 
-section h2 {
+.h2-pag2 {
     font-size: 4rem;
     text-align: center;
+    position: absolute;
+    white-space: nowrap;
+    width: max-content;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
 }
 
+
+
 .parallax {
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 
@@ -360,6 +378,8 @@ section h2 {
     width: 100%;
     height: 400px;
     padding: 4rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .hr-sobreviaggio {
