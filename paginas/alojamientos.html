@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,33 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles_dest_aloj.css">
 </head>
+
 <body>
 
-<!-- Barra de navegación -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Viaggio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Destinos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Viaggio</a>
-                </li>
-            </ul>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Viaggio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Viaggio</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Sección de Destino -->
     <div class="container mt-5">
         <h2 class="text-center mb-4">Elige tu destino</h2>
-        
+
         <!-- Selector de ciudad -->
         <div class="row mb-3">
             <div class="col-12">
@@ -46,6 +48,7 @@
             </div>
         </div>
 
+        <!-- Sección de Fechas -->
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <label for="fecha-llegada">Fecha de llegada:</label>
@@ -58,7 +61,8 @@
         </div>
         <div class="row mt-4 text-center">
             <div class="col-12">
-                <button class="btn btn-warning btn-lg d-block mx-auto" onclick="scrollToAlojamiento()">Continuar</button>
+                <button class="btn btn-warning btn-lg d-block mx-auto"
+                    onclick="scrollToAlojamiento()">Continuar</button>
             </div>
         </div>
     </div>
@@ -67,50 +71,104 @@
     <div class="container mt-5">
         <h2 class="text-center mb-4">Elige tu alojamiento</h2>
 
-        <!-- Carrusel de alojamientos -->
-        <div id="multiItemCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="Imagenes/Casa-del-Bicentenario.jpg" class="img-fluid" alt="Alojamiento 1">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/centrocultural.jpg" class="img-fluid" alt="Alojamiento 2">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/Teatro-Municipal.jpg" class="img-fluid" alt="Alojamiento 3">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/Museo-de-Ciencias.jpg" class="img-fluid" alt="Alojamiento 4">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="Imagenes/Teatro-Municipal.jpg" class="img-fluid" alt="Alojamiento 5">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/Teatro-Municipal.jpg" class="img-fluid" alt="Alojamiento 6">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/Teatro-Municipal.jpg" class="img-fluid" alt="Alojamiento 7">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="Imagenes/Teatro-Municipal.jpg" class="img-fluid" alt="Alojamiento 8">
-                        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="/Proyecto_Final_2025/" class="card-img-top" alt="Alojamiento 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Casa del Bicentenario</h5>
+                        <p class="card-text">Un espacio cultural emblemático con comodidad y estilo.</p>
+                        <p class="btn btn-warning">Ver más</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Controles del carrusel -->
-            <a class="carousel-control-prev" href="#multiItemCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#multiItemCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/centrocultural.jpg" class="card-img-top" alt="Alojamiento 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Centro Cultural</h5>
+                        <p class="card-text">Ubicación céntrica con acceso a eventos y actividades.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Teatro-Municipal.jpg" class="card-img-top" alt="Alojamiento 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Teatro Municipal</h5>
+                        <p class="card-text">Hospédate cerca de la vida artística y cultural.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="Imagenes/Museo-de-Ciencias.jpg" class="card-img-top" alt="Alojamiento 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de Ciencias</h5>
+                        <p class="card-text">Una estadía con acceso a exhibiciones científicas y educación.</p>
+                        <p class="btn btn-warning">Ver más</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -118,7 +176,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="/Proyecto_Final_2025/js/alojamientos.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="JavaScript/mainDest_Aloja.js"></script>
 </body>
+
 </html>
