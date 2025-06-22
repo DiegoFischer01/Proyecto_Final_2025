@@ -1,3 +1,6 @@
+const btnFiltrar = document.getElementById("btnFiltrar");
+const menuFiltros = document.getElementById("menuFiltros");
+const btnCerrarFiltros = document.getElementById("btnCerrarFiltros");
 const nuevasActividades = [
   {
     titulo: "Casa del bicentenario",
@@ -86,6 +89,11 @@ function agregarAlItinerario(titulo) {
   }
 }
 
+function quitarDelItinerario(titulo) {
+  let actividades = obtenerItinerario();
+  actividades = actividades.filter(act => act !== titulo);
+  localStorage.setItem('itinerario', JSON.stringify(actividades));
+}
 
 
 function crearTarjeta(actividad) {
@@ -114,8 +122,13 @@ function crearTarjeta(actividad) {
       agregarAlItinerario(actividad.titulo);
       boton.textContent = "Quitar";
       mensaje.style.display = "block";
+    } else {
+      quitarDelItinerario(actividad.titulo);
+      boton.textContent = "Agregar";
+      mensaje.style.display = "none";
     }
   });
+  
 
   return tarjeta;
 }
@@ -174,3 +187,12 @@ botonVerMas.addEventListener("click", mostrarActividades);
 
 // Mostrar primeras 6 al cargar
 mostrarPrimerasSeis();
+
+
+btnFiltrar.addEventListener("click", () => {
+  menuFiltros.classList.toggle("oculto");
+});
+
+btnCerrarFiltros.addEventListener("click", () => {
+  menuFiltros.classList.add("oculto");
+});
