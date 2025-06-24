@@ -31,6 +31,8 @@ window.addEventListener("scroll",
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 
+
+
 //MAPA DE OLAVARRIA LEATLET
 const olavarriaCordenadas = [-36.8933, -60.3225];
 const mapa = L.map(`mapa`).setView(olavarriaCordenadas, 13) //13 es un buen zoom para ciudad
@@ -239,7 +241,7 @@ const title = document.getElementById("parallax-texto");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-    const offsetX = scrollY * 0.3;
+    const offsetX = scrollY * 0.6;
     title.style.transform = `translateX(${offsetX}px)`
 });
 
@@ -247,6 +249,6 @@ const title2 = document.getElementById("parallax-texto2");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-    const offsetX = scrollY * -0.3;
+    const offsetX = scrollY * -0.6;
     title2.style.transform = `translateX(${offsetX}px)`
 });

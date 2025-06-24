@@ -35,17 +35,40 @@ body {
 }
 
 /* Botón "Comenzar" */
-.btn-warning {
-    background-color: #ff9800;
+.btn-comenzar {
+    background-color: #FA9500;
+    color: #fff;
     border: none;
+    border-radius: 10px;
     transition: 0.3s;
     position: relative;
     z-index: 2;
 }
 
-.btn-warning:hover {
-    background-color: #e68a00;
+.btn-comenzar:hover {
+    border: 5px solid #BABD8D;
+    border-radius: 20px;
+    background-color: #EB6424;
 }
+
+.boton-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-registrate {
+    border-radius: 10px;
+}
+
+.btn-registrate:hover{
+    background-color: #FA9500;
+    border-radius: 10px;
+}
+
+
 
 /* Ajuste del botón "Registrarse" */
 .nav-link.btn-warning {
@@ -58,6 +81,7 @@ h1, p {
 
 .contenedor-inicio {
     height: 100vh;
+    width: 100%;
 }
 
 .contenedor-inicio-info {
@@ -81,6 +105,9 @@ h1, p {
     color: white;
 }
 
+.contenedor-inicio h1 {
+    font-size: 4.5rem;
+}
 
 /*html pagina 1*/
 /*TIUTLO Y SUBTITULO*/
@@ -177,6 +204,7 @@ h1, p {
 .overlay h2 {
     text-shadow: 5px 3px 7px rgba(0,0,0,0.61);
 }
+
 
 
 /*EFECTOS*/
@@ -276,8 +304,17 @@ h1, p {
 .acordeon-contenedor {
     background-color: #dfdfdf79;
     width: 100%;
-    height: 300px;
+    height: 330px;
     border-radius: 0px 0px 20px 20px;
+    padding-top: 100px;
+    border-left: 2px solid #7C6A0A;
+    border-right: 2px solid #7C6A0A;
+    border-bottom: 2px solid #7C6A0A;
+}
+
+
+.accordion-button {
+    color: #EB6424;
 }
 
 /*parallax*/
@@ -427,7 +464,7 @@ section {
     align-items: center;
     background-color: #dfdfdf79;
 }
-    
+
 
 
 .mapa {
@@ -482,7 +519,7 @@ section {
     -moz-box-shadow: 11px 0px 21px -6px rgba(255,255,255,0.75);
     box-shadow: 11px 0px 21px -6px rgba(0, 0, 0, 0.75);
 }
-.drg-img:hover {
+.drg-img:hover{
     border-radius: 40px;
     border: 6px solid white;
     transition: 0.3s ease;
@@ -590,6 +627,19 @@ section {
     right: 0;
     transform: scaleX(-1);
 }
+
+.img-flecha-contenedor {
+    position: relative;
+    width: 100px;
+}
+.img-flecha-contenedor img {
+    position: absolute;
+    width: 100px;
+    transform: translate(-200px, -200px);
+    opacity: 1;
+}
+
+
 
 /*Mayra - Última pantalla y footer*/
 .carousel-contenedor {
