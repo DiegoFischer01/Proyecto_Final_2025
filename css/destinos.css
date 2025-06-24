@@ -1,0 +1,30 @@
+h1 {
+    color: #fa9500;
+    margin-bottom: 3.75rem;
+}
+
+img {
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.col {
+    margin-bottom: 1.875rem;
+}
+
+.card {
+    border: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.card-title {
+    color: white;
+    text-shadow: 
+    .0813rem .0813rem 0rem black,  /* Bottom-right shadow */
+    -0.0813rem -0.0813rem 0rem black, /* Top-left shadow */
+    -0.0813rem .0813rem 0rem black,  /* Bottom-left shadow */
+    .0813rem -0.0813rem 0rem black;  /* Top-right shadow */
+}

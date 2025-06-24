@@ -56,9 +56,9 @@ h1, p {
 }
 
 .contenedor-inicio-info {
-    background-image: url(../Imagenes/mejorCalidad.jpg);
+    background-image: url(../Imagenes/home/img-svg-inicio.svg);
     background-position: center;
-    background-size: cover;
+    background-size: cover cover;
 }
 .contenedor-inicio-info::before {
     content: " ";
@@ -81,12 +81,14 @@ h1, p {
 /*TIUTLO Y SUBTITULO*/
 
 .contenedor-pag1 {
+    height: 580px;
     display: flex;
-    max-width: 1100px;
-    margin: auto;
     gap: 40px;
-    padding-top: 50px;
+    padding-top: 70px;
+    background-color: #dfdfdf79;
+    border-radius: 0px 0px 20px 20px;
 }
+
 
 .seccion-texto {
     flex: 1;
@@ -142,20 +144,6 @@ h1, p {
     transform: scale(1.5) rotateY(180deg);
     opacity: 0;
 
-}
-
-/*OVERLAY2 TE LLEVA AL OTRO LINK CON TRANSICION DE PANTALLA EN NEGRO*/
-.pantalla-negra {
-    position: fixed;
-    inset: 0;
-    background: black;
-    opacity: 0;
-    z-index: 10;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
-}
-.pantalla-negra.active {
-    opacity: 1;
 }
 
 
@@ -279,12 +267,31 @@ h1, p {
     }
 }
 
+/*ACORDEON*/
+.acordeon-contenedor {
+    background-color: #dfdfdf79;
+    width: 100%;
+    height: 300px;
+    border-radius: 0px 0px 20px 20px;
+}
+
 /*parallax*/
 .sec1 {
-    background: url(../Imagenes/mejorCalidad.jpg);
+    background: url(../Imagenes/home/img-parallax.png);
     background-position: bottom center;
     background-size: cover;
     background-attachment: fixed;
+}
+.sec1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: -1;
 }
 .sec1::after {
     content: "";
@@ -293,16 +300,27 @@ h1, p {
     left: 0;
     right: 0;
     height: 120px;
-    background: linear-gradient(to bottom, #ffff 0%, transparent 100%);
-
+    background: linear-gradient(to bottom, #dfdfdf79 0%, transparent 100%);
 }
 
 
+
 .sec2 {
-    background: url(../Imagenes/mejorCalidad.jpg);
+    background: url(../Imagenes/home/img-parallax.png);
     background-position: bottom center;
     background-size: cover;
     background-attachment: fixed;
+}
+.sec2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: -1;
 }
 .sec2::after {
     content: "";
@@ -311,13 +329,13 @@ h1, p {
     left: 0;
     right: 0;
     height: 120px;
-    background: linear-gradient(to bottom, transparent 10%, #ffff 100%);
+    background: linear-gradient(to bottom, transparent 10%, #dfdfdf79 100%);
 }
 
 
 section {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     transform-style: preserve-3d;
     display: flex;
     align-items: center;
@@ -342,6 +360,11 @@ section h2 {
     width: 100%;
     height: 400px;
     padding: 4rem;
+}
+
+.hr-sobreviaggio {
+    color: white;
+    width: 50%;
 }
 
 
@@ -382,7 +405,10 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #dfdfdf79;
 }
+    
+
 
 .mapa {
     max-width: 1366px;
@@ -390,9 +416,160 @@ section h2 {
     width: 100%;
     border-radius: 12px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.75);
 }
 
+
+
+/*COMENTARIOS*/
+
+.draggable-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #dfdfdf79;
+}
+
+.msj {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.drg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.drg-img {
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-box-shadow: 11px 0px 21px -6px rgba(255,255,255,0.75);
+    -moz-box-shadow: 11px 0px 21px -6px rgba(255,255,255,0.75);
+    box-shadow: 11px 0px 21px -6px rgba(0, 0, 0, 0.75);
+}
+.drg-img:hover {
+    border-radius: 40px;
+    border: 6px solid white;
+    transition: 0.3s ease;
+}
+
+.drg-estrellas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 5px;
+    position: absolute;
+    transform: translateY(70px);
+
+    
+}
+.drg-estrellas p{
+    color: rgb(233, 233, 42);
+}
+
+
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    visibility: hidden;
+    display: inline-block;
+}
+
+.zone {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.zona-aqui {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    border: 2px dashed black ;
+    width: 400px;
+    height: 130px;
+    border-radius: 20px;
+}
+
+
+.drg-bk {
+    background-color: blue;
+}
+
+.h2 {
+    color: red;
+    text-align: center; 
+}
+
+.info-container {
+    width: 450px;
+    height: 130px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 20px;
+}
+
+.brg-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brg-info h3 {
+    position: relative;
+    font-size: 30px;
+    transform: translateY(-40px);
+    border-top: 3px solid black;
+    width: 90%;
+    padding-left: 15px;
+}
+
+.brg-info h3::before,
+.brg-info h3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 28px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+.brg-info h3::before {
+    left: 0;
+}
+
+.brg-info h3::after {
+    right: 0;
+    transform: scaleX(-1);
+}
 
 /*Mayra - Última pantalla y footer*/
 .carousel-contenedor {
@@ -400,6 +577,7 @@ section h2 {
     justify-content: center;
     width: 100%;
     padding: 15px;
+    background-color: #dfdfdf79;
 }
 
 
@@ -495,6 +673,13 @@ footer {
 @media (max-width: 767.98px) {
     .contenedor-pag1 {
         display: none;
+    }
+    .sec1, .sec2 {
+        display: none;
+    }
+    .acordeon-contenedor {
+        position: relative;
+        z-index: 999;
     }
 }
 
