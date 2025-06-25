@@ -1,6 +1,7 @@
 /* GENERAL */
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -11,7 +12,7 @@ body {
 }
 
 .container {
-  flex: 1; 
+  flex: 1;
 }
 
 
@@ -20,10 +21,12 @@ body {
 .card button {
   background-color: #6750a4;
   color: #fff;
+
   &:hover {
     background-color: #fa9500;
     color: #fff;
   }
+
   &:active {
     background-color: #fa9500 !important;
     color: white !important;
@@ -50,56 +53,123 @@ body {
   height: 150px;
 }
 
+/*Menú ordenar*/
+#btnOrdenar {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 1001;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+#btnOrdenar:hover {
+  background-color: #ff8c00;
+  color: white;
+}
+
+#btnOrdenar img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.menu-ordenar {
+  position: fixed;
+  top: 140px;
+  right: 20px;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  z-index: 1000;
+}
+
+
+.oculto {
+  display: none;
+}
+
+#btnCerrarOrdenar {
+  margin-top: 10px;
+  background-color: #f57c00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#btnCerrarOrdenar:hover {
+  background-color: #ef6c00;
+}
+
+
+
+
 /* FOOTER */
 footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 150px;
-    width: 100%;
-    padding: 30px;
-    background: #333334;
-    color: #fff;
-    font-weight: bold;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  padding: 30px;
+  background: #333334;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
 .logoFooter {
-    width: 250px;
-    height: auto;
+  width: 250px;
+  height: auto;
 }
 
 .divSucursales,
 .divHorarios,
 .divRedes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 15px;
-    margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 20px;
 }
 
 .divSucursales p,
 .divHorarios p {
-    margin: 5px 0;
-    line-height: 1.5;
+  margin: 5px 0;
+  line-height: 1.5;
 }
 
 .divRedes {
-    flex-direction: row;
-    height: 110px;
-    margin-top: 15px;
+  flex-direction: row;
+  height: 110px;
+  margin-top: 15px;
 }
 
 .logosRedes {
-    width: 50px;
-    height: 50px;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
 }
 
 .logosRedes:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
