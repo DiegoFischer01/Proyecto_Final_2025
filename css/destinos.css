@@ -14,7 +14,6 @@ img {
 
 
 .card {
-    border: none;
     &:hover{
         cursor: pointer;
     }
@@ -23,6 +22,67 @@ img {
 .card-title {
     color: white;
 }
+
+/*card destinos*/
+.columnas-imagenes-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #dfdfdf79;
+    background-image: url(../Imagenes/home/lineas-grise-dos.svg);
+}
+
+.columnas-imagenes-contenedor h2 {
+    font-size: 60px;
+}
+
+.columna-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+
+.columna {
+    border: 4px solid #BABD8D;
+    position: relative;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+    border-radius: 6px;
+}
+
+
+.columna-img {
+    object-fit: cover;
+    background-color: black;
+    border-radius: 6px;
+}
+
+
+.columna-img-olavarria {
+    border-radius: 6px;
+}
+
+.columna p {
+    position: absolute;
+    transform: translate(95px, -300px);
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+
 
 
 /*FOOTER*/
