@@ -30,7 +30,7 @@
             <a class="nav-link" href="./paginas/sobreViaggio.html">Sobre Viaggio</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-warning nav-link text-white" href="./paginas/registrarse.html">Registrarse</a>
+            <a class="btn-registrate nav-link text-white" href="./paginas/registrarse.html">Registrarse</a>
           </li>
         </ul>
       </div>
@@ -40,10 +40,14 @@
   <!-- Sección principal con Bootstrap Grid -->
   <div class="contenedor-inicio-info container-fluid ">
     <div class="row justify-content-center align-items-center contenedor-inicio">
-      <div class="col-lg-8 text-center">
-        <h1 class="display-3">Una mejor experiencia de viaje</h1>
+      <div class="col-lg-8 text-center inicio-info">
+        <h1 class="display-3">Una mejor experiencia de turismo</h1>
         <p class="fs-4">Tu itinerario personalizado a donde sea que vayas</p>
-        <button class="btn btn-warning btn-lg">Comenzar</button>
+        <div class="boton-contenedor">
+          <a class="a-boton-comenzar" href="./paginas/alojamientos.html">
+            <button class="btn-comenzar btn-lg">Comenzar</button>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -61,24 +65,28 @@
           <div class="img-card img-card-top" data-link="./pagina1.html">
             <img src="./Imagenes/home/iglesia-san-jose.png" class="img top" alt="">
             <div class="info-contenedor">
-              <h2>Parque Mitre</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+              <h2>Iglesia San José</h2>
+              <p>Iglesia principal de la ciudad, punto de referencia histórico y religioso, con su arquitectura neogótica, declarado como patrimonio histórico local.</p>
             </div>
           </div>
 
           <div class="img-card img-card-top ">
             <img src="./imagenes/home/la-maxima.jpg" class="img top" alt="">
             <div class="info-contenedor">
-              <h2>Parque Mitre</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+              <h2>La Máxima (Reserva Natural Municipal)</h2>
+              <p>Fauna local (Ciervos, aves, reptiles). Áreas verdes, juegos infantiles, parrilas.
+                Senderos para caminar y espacios recreativos.
+              </p>
             </div>
           </div>
 
           <div class="img-card margen-inferior img-card-bottom">
             <img src="./Imagenes/home/museo-emiliozzi.jpg" class="img buttom" alt="">
             <div class="info-contenedor">
-              <h2>Parque Mitre</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+              <h2>Museo Hermano Emiliozzi</h2>
+              <p>los corredos Juan y Dante Emiliozzi, íconos del automovilismo argentino.
+                  ubicaco en su antiguo taller. Autos originales (como la "Galera"), trofeos, herrmientas y documentos. Patrimonio automovilístico nacional.
+              </p>
             </div>
           </div>
 
@@ -86,7 +94,7 @@
             <img src="./Imagenes/home/parque-mitre.jpg" class="img buttom" alt="">
             <div class="info-contenedor">
               <h2>Parque Mitre</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate quisquam numquam, dolorem</p>
+              <p>Lugar de encuentro para caminatas, ferias y eventos, principal pulmón verde urbano y punto social de Olavarria, puentes, juegos y pista para correr o andar en bici</p>
             </div>
           </div>
       </div>  
@@ -97,43 +105,45 @@
 
 
   <!--ACORDEON DE PAG1 SOLO PARA CELULARES-->
-<div class="acordeon-contenedor accordion container pt-5 d-block d-md-none" id="accordionExample">
+<div class="acordeon-contenedor accordion container d-block d-md-none" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        La Maxima 
+        Iglesia San Jose 
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <img src="./Imagenes/home/la-maxima.jpg" class="img-fluid" alt="">
       <div class="accordion-body">
-        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>Iglesia principal de la ciudad</strong> , punto de referencia histórico y religioso, con su arquitectura neogótica, declarado como patrimonio histórico local.
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Museo Hermanos Emiliozzi
+        La Máxima (Reserva Natural Municipal)
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <img src="./Imagenes/home/museo-emiliozzi.jpg" class="img-fluid" alt="">
       <div class="accordion-body">
-        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>La Máxima,</strong> Fauna local (Ciervos, aves, reptiles). Áreas verdes, juegos infantiles, parrilas.
+        Senderos para caminar y espacios recreativos.
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Parque Mitre
+        Museo Hermanos Emiliozzi
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <img src="./Imagenes/home/parque-mitre.jpg" class="img-fluid" alt="">
       <div class="accordion-body">
-        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>Hnos Emiliozzi</strong> los corredos Juan y Dante Emiliozzi, íconos del automovilismo argentino.
+                  ubicaco en su antiguo taller. Autos originales (como la "Galera"), trofeos, herrmientas y documentos. Patrimonio automovilístico nacional.
       </div>
     </div>
   </div>
@@ -141,13 +151,13 @@
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        Iglesia San José
+        Parque Mitre
       </button>
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <img src="./Imagenes/home/iglesia-san-jose.png" class="img-fluid" alt="">
       <div class="accordion-body">
-        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <strong>Parque Mitre </strong>Lugar de encuentro para caminatas, ferias y eventos, principal pulmón verde urbano y punto social de Olavarria, puentes, juegos y pista para correr o andar en bici
       </div>
     </div>
   </div>
@@ -158,7 +168,7 @@
   <!-- Pagina 2 -->
   <div class="parallax">
     <section class="sec1">
-      <h2 class="mx-5 h2-pag2"> VIAGGIO</h2>
+      <h2 class="mx-5 h2-pag2" id="parallax-texto">VIAGGIO MI LUGAR - VIAGGIO TU LUGAR - VIAGGIO NUESTRO LUGAR - VIAGGIO MI LUGAR - VIAGGIO TU LUGAR</h2>
     </section>
 
     <!-- SOBRE VIAGGIO -->
@@ -166,10 +176,13 @@
       <div class="casa-contenedor container-fluid bg-dark">
         <div class="info">
           <div class="info-h3-p">
-            <h3>HOLA</h3>
+            <h3>HOLA! ESTO ES VIAGGIO</h3>
             <hr class="hr-sobreviaggio">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio dolorum id saepe voluptatibus. Laborum tenetur, dicta laboriosam ipsam earum quis assumenda molestias architecto at. Corporis ad reprehenderit dicta ut.</p>
-            <button id="btn-conocerMas">Conocer más</button>
+            <p>Viaggio es una guía digital pensada para que descubras los mejor de <strong>Olavarría</strong> de forma simple, visual y auténtica.<br>Reunimos los rincones hitóricos, los espacios verdes, las experiencias culturales y tambien <strong>Los mejores alojamientos</strong>, para que puedas planear tu viaje completo desde un solo lugar.</p>
+            <a class="a-boton-contenedor" href="./paginas/sobreViaggio.html">
+              <button id="btn-conocerMas">Conocer más</button>
+            </a>
+            
           </div>
           <div class="ilustracion-contenedor">
             <img src="./Imagenes/home/ilustracion-inicio.png" alt="">
@@ -179,7 +192,7 @@
     </div>
 
     <section class="sec2">
-      <h2 class="mx-5 h2-pag2">VIAGGIO</h2>
+      <h2 class="mx-5 h2-pag2" id="parallax-texto2">VIAGGIO MI LUGAR - VIAGGIO TU LUGAR - VIAGGIO NUESTRO LUGAR - VIAGGIO MI LUGAR - VIAGGIO TU LUGAR</h2>
     </section>
   </div>
 
@@ -190,8 +203,7 @@
   <div class="mapa-contenedor">
     <div id="mapa" class="mapa">
     </div>
-    <h2 class="mx-5 h2-pag2">Mapa de la ciudad</h2>
-
+      <h2 class="mx-5">Mapa de la ciudad</h2>
   </div>
   
   <!--SECCION COMENTARIOS-->
@@ -205,7 +217,7 @@
 
         <div class="zone drg-zone container" id="zona-origen">
             <div class="drg" id="draggable1" draggable="true">
-                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <img class="drg-img drg-img-js" src="./Imagenes/home/foto-vivi.jpg" alt="">
                 <div class="drg-estrellas">
                   <p>★</p>
                   <p>★</p>
@@ -214,8 +226,10 @@
                   <p>★</p>
                 </div>
             </div>
+            <div class="img-flecha-contenedor">
+            </div>
             <div class="drg" id="draggable2" draggable="true">
-                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <img class="drg-img drg-img-js" src="./Imagenes/home/foto-sergio.jpg" alt="">
                   <div class="drg-estrellas">
                     <p>★</p>
                     <p>★</p>
@@ -225,7 +239,7 @@
                   </div>
             </div>
             <div class="drg" id="draggable3" draggable="true">
-                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <img class="drg-img drg-img-js" src="./Imagenes/home/foto-carolina.png" alt="">
                 <div class="drg-estrellas">
                   <p>★</p>
                   <p>★</p>
@@ -235,7 +249,7 @@
                 </div>
             </div>
             <div class="drg" id="draggable4" draggable="true">
-                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <img class="drg-img drg-img-js"  src="./Imagenes/home/mi-cara.jpeg" alt="">
                 <div class="drg-estrellas">
                   <p>★</p>
                   <p>★</p>
@@ -245,7 +259,7 @@
                 </div>                
             </div>
             <div class="drg" id="draggable5" draggable="true">
-                <img class="drg-img" src="./Imagenes/home/mi-cara.jpeg" alt="">
+                <img class="drg-img drg-img-js" src="./Imagenes/home/mi-cara.jpeg" alt="">
                 <div class="drg-estrellas">
                   <p>★</p>
                   <p>★</p>
@@ -256,6 +270,38 @@
             </div>
             
         </div>
+    </div>
+
+
+<!--COMENTARIOS SUELTOS PARA CELULAR-->
+    <div class="comentarios-contenedor">
+      <div class="comentarios">
+        <div class="comentario">
+          <img class="" src="./Imagenes/home/foto-vivi.jpg" alt="">
+          <h2>Vivi Blasco</h2>
+          <p>"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."</p>
+        </div>
+        <div class="comentario">
+          <img class="" src="./Imagenes/home/foto-vivi.jpg" alt="">
+          <h2>Vivi Blasco</h2>
+          <p>"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."</p>
+        </div>
+        <div class="comentario">
+          <img class="" src="./Imagenes/home/foto-vivi.jpg" alt="">
+          <h2>Vivi Blasco</h2>
+          <p>"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."</p>
+        </div>
+        <div class="comentario">
+          <img class="" src="./Imagenes/home/foto-vivi.jpg" alt="">
+          <h2>Vivi Blasco</h2>
+          <p>"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."</p>
+        </div>
+        <div class="comentario">
+          <img class="" src="./Imagenes/home/foto-vivi.jpg" alt="">
+          <h2>Vivi Blasco</h2>
+          <p>"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."</p>
+        </div>
+      </div>
     </div>
     
   <!-- ÚLTIMA PÁGINA -->
@@ -314,18 +360,13 @@
 
   <!-- FOOTER -->
   <footer class="">
-    <div>
-      <img src="./imagenlogo" alt="Logo" class="logoFooter" />
-    </div>
     <div class="divSucursales">
       <p>Sucursales</p>
       <p>Calle inventada 1234</p>
       <p>Calle alternativa 5679</p>
     </div>
-    <div class="divHorarios">
-      <p class="horarios">Horarios de atención:</p>
-      <p>Lunes a sábados</p>
-      <p>8:00 a 20:00hs</p>
+    <div>
+      <img src="./imagenlogo" alt="Logo" class="logoFooter" />
     </div>
     <div class="divRedes">
       <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
