@@ -57,24 +57,24 @@ const dropZone = document.getElementById('drop-zone');
 
 const itemData = {
     draggable1: {
-        titulo: "Juan Perez",
-        descripcion: "Muy recomendado, hermosos lugares para visitar en familia"
+        titulo: "Vivi Blasco",
+        descripcion: `"¡Excelente página! Encontré todo lo que necesitaba para organizar mi escapada a Olavarría. Clara, rápida y muy visual."`
     },
     draggable2: {
-        titulo: "Alex Beltramella",
-        descripcion: "Descripción del elemento 2"
+        titulo: "Sergio Garcia Retegui",
+        descripcion: `"Viaggio me ayudó a descubrir lugares increíbles como el Parque Mitre y la iglesia San josé. ¡No sabía que Olavarría tenía tanto para ofrecer!"`
     },
     draggable3: {
-        titulo: "Elemento 3",
-        descripcion: "Descripción del elemento 3"
+        titulo: "Carolina Vasconcellos",
+        descripcion: `"La mejor guía turística de Olavarria. Me encantaron las fotos y la info útil para cada lugar."`
     },
     draggable4: {
-        titulo: "Elemento 4",
-        descripcion: "Descripción del elemento 4"
+        titulo: "Jose Mauricio",
+        descripcion: `"Gracias a Viaggio visité el Museo de los Hermanos Emiliozzi. ¡Imperdible para los fans del automovilismo!"`
     },
     draggable5: {
-        titulo: "Elemento 4",
-        descripcion: "Descripción del elemento 4"
+        titulo: "Karen Simari",
+        descripcion: `"¡Me encantó la experiencia! Viaggio hizo     que recorrer Olavarría fuera fácil y emocionante. Todo esta explicado con detalle"`
     }
 };
 
@@ -111,7 +111,6 @@ function setupDrop(zone) {
         e.preventDefault();
 
 
-
         const draggedId = e.dataTransfer.getData(`text/plain`);
         const draggedEl = document.getElementById(draggedId);
         const mensaje = document.getElementById('mensaje');
@@ -130,6 +129,7 @@ function setupDrop(zone) {
 
 
         if(zone.id === "drop-zone") {
+
             const placeholder = document.createElement("div");
             placeholder.classList.add("placeholder");
             placeholder.style.width = "50%";
@@ -164,14 +164,16 @@ function setupDrop(zone) {
 
             //CRUZ PARA ELIMINAR EL ELEMENTO DEL DROP ZONE
             const closeButton = document.createElement("button");
+            closeButton.classList.add("btn-quitar");
             closeButton.textContent = "X";
             closeButton.style.position = "absolute";
             closeButton.style.top = "0px";
-            closeButton.style.right = "0px";
+            closeButton.style.right = "10px";
             closeButton.style.background = "transparent";
             closeButton.style.border = "none";
             closeButton.style.fontSize = "20px";
             closeButton.style.cursor = "pointer";
+            closeButton.style.zIndex = "999";
 
             //CONTENEDOR RELATIVO PARA POSICIONAR LA X
             contenedor.style.position = "relative";
@@ -226,7 +228,9 @@ function setupDrop(zone) {
             if(!inserted) {
                 zone.appendChild(draggedEl); //SI NO SE INSERTÓ, AÑADIR AL FINAL
             }
+            
         }
+
     });
 }
 
