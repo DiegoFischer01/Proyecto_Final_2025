@@ -18,11 +18,11 @@
   </head>
   <body>
     <!--START: Barra de navegación responsiva -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/Proyecto_Final_2025/index.html"
-          >Viaggio</a
-        >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+      <div class="navbar container">
+        <a class="navbar-brand a-logo" href="/Proyecto_Final_2025/index.html">
+          <img src="../Imagenes/home/logo.svg" alt="">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,10 +37,10 @@
               <a class="nav-link" href="#">Destinos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre Viaggio</a>
+              <a class="nav-link" href="./sobreViaggio.html">Sobre Viaggio</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-warning nav-link text-white" href="#"
+              <a class="btn btn-warning nav-link text-white" href="./registrarse.html"
                 >Registrarse</a
               >
             </li>
@@ -119,7 +119,7 @@
       <p>Calle alternativa 5679</p>
     </div>
     <div>
-      <img src="./imagenlogo" alt="Logo" class="logoFooter" />
+      <img src="../Imagenes/home/logo.svg" alt="Logo" class="logoFooter" />
     </div>
     <div class="divRedes">
       <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
@@ -134,6 +134,15 @@
     </div>
   </footer>
   <!-- FOOTER -->
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="../js/destinos.js"></script>
 
   </body>
 </html>
