@@ -143,7 +143,7 @@ function setupDrop(zone) {
             zone.innerHtml = "";
 
             const contenedor = document.createElement('div');
-            contenedor.classList.add("info-container");
+            contenedor.classList.add("info-container", "fade-in");
             contenedor.style.display = "flex";
             contenedor.style.alignItems = "flex-start";
             contenedor.style.gap = "10px";
@@ -181,7 +181,13 @@ function setupDrop(zone) {
 
             //EVENTO AL HACER CLICK EN LA CRUZ
             closeButton.addEventListener("click", () => {
-                contenedor.remove();//ELIMINA EL CONTENEDOR DE DROP ZONE
+                contenedor.classList.remove("fade-in");
+                contenedor.classList.add("fade-out");
+
+                contenedor.addEventListener("animationend" , () => {
+                    contenedor.remove();//ELIMINA EL CONTENEDOR DE DROP ZONE
+                })
+
 
                 const placeholder = zonaOrigen.querySelector(`[data-placeholder-for="${draggedId}"]`);
 
