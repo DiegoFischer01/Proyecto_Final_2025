@@ -168,5 +168,50 @@ footer {
 
     footer {
         padding: 50px;
+        max-width: 1366px;
+        display: flex;
+        justify-content: center;
     }
+
+    .divSucursales p {
+        font-size: 10px;
+    }
+
+    .logoFooter {
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divRedes a > img {
+        object-fit: contain;
+        width: 30px;
+    }
+
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .divSucursales p{
+        font-size: 10px;
+    }
+
+    .logoFooter {
+        width: 100px;
+    }
+
+    .divRedes {
+        flex-direction: column;
+    }
+    .divRedes a > img {
+        width: 30px;
+        object-fit: contain;
+    }
+
+    .columna-imagenes{
+        padding: 0;
+        padding-top: 50px;
+        row-gap: 50px;
+    }
+
 }
