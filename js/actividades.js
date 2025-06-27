@@ -1,6 +1,6 @@
 const btnFiltrar = document.getElementById("btnFiltrar");
 const menuFiltros = document.getElementById("menuFiltros");
-const btnCerrarFiltros = document.getElementById("btnCerrarOrdenar");
+const btnCerrarFiltros = document.getElementById("btnCerrarFiltros");
 const nuevasActividades = [
   {
     titulo: "Casa del bicentenario",

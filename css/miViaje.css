@@ -1,40 +1,11 @@
 /* GENERAL */
-
-html,
 body {
-  height: 100%;
   margin: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  flex: 1;
-}
-
-
-/* TARJETA ALOJAMIENTO*/
-
-.card button {
-  background-color: #6750a4;
-  color: #fff;
-
-  &:hover {
-    background-color: #fa9500;
-    color: #fff;
-  }
-
-  &:active {
-    background-color: #fa9500 !important;
-    color: white !important;
-  }
-}
-
+/* TARJETA ALOJAMIENTO */
 .card {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .card-text {
@@ -47,15 +18,31 @@ body {
   object-fit: cover;
 }
 
+.card button {
+  background-color: #6750a4;
+  color: #fff;
+}
+
+.card button:hover {
+  background-color: #fa9500;
+  color: #fff;
+}
+
+.card button:active {
+  background-color: #fa9500 !important;
+  color: white !important;
+}
+
 /* TARJETA ACTIVIDADES */
 .actividades-img {
   padding: 0.4rem;
   height: 150px;
+  object-fit: cover;
 }
 
-/*Menú ordenar*/
+/* MENÚ ORDENAR */
 #btnOrdenar {
-  position: fixed;
+  position: absolute;
   top: 90px;
   right: 20px;
   z-index: 1001;
@@ -70,9 +57,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-
-
-
 #btnOrdenar:hover {
   background-color: #ff8c00;
   color: white;
@@ -83,9 +67,8 @@ body {
   height: 20px;
 }
 
-
 .menu-ordenar {
-  position: fixed;
+  position: absolute;
   top: 140px;
   right: 20px;
   background-color: white;
@@ -95,7 +78,6 @@ body {
   width: 220px;
   z-index: 1000;
 }
-
 
 .oculto {
   display: none;
@@ -117,8 +99,32 @@ body {
   background-color: #ef6c00;
 }
 
+/* BOTÓN VOLVER */
+.contbotones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 15px 20px;
+}
 
+.boton1 {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
+.boton1:hover {
+  background-color: rgb(201, 130, 0);
+}
+
+a {
+  text-decoration: none;
+}
 
 /* FOOTER */
 footer {
