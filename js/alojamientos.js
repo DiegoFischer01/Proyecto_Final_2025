@@ -1,13 +1,26 @@
 'use strict';
 
-// Calendario
+// Inicialización de calendarios con validación de fechas
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".datepicker").forEach(input => {
-    $(input).datepicker({
-      format: 'dd/mm/yyyy',
-      autoclose: true,
-      todayHighlight: true
-    });
+  const llegadaInput = $('#fecha-llegada');
+  const regresoInput = $('#fecha-regreso');
+
+  llegadaInput.datepicker({
+    format: 'dd/mm/yyyy',
+    autoclose: true,
+    todayHighlight: true
+  }).on('changeDate', function (e) {
+    const selectedDate = e.date;
+    regresoInput.datepicker('setStartDate', selectedDate);
+    validarFechas();
+  });
+
+  regresoInput.datepicker({
+    format: 'dd/mm/yyyy',
+    autoclose: true,
+    todayHighlight: true
+  }).on('changeDate', function () {
+    validarFechas();
   });
 });
 
@@ -32,13 +45,11 @@ document.querySelectorAll(".btn-seleccionar").forEach(boton => {
     const seleccionado = boton.classList.contains("seleccionado");
 
     if (seleccionado) {
-      // Desseleccionar
       boton.classList.remove("seleccionado", "btn-success");
       boton.classList.add("btn-outline-success");
       boton.textContent = "Seleccionar";
       boton.closest(".card").classList.remove("seleccionada");
     } else {
-      // Desseleccionar todos los demás
       document.querySelectorAll(".btn-seleccionar").forEach(b => {
         b.classList.remove("seleccionado", "btn-success");
         b.classList.add("btn-outline-success");
@@ -46,7 +57,6 @@ document.querySelectorAll(".btn-seleccionar").forEach(boton => {
         b.closest(".card").classList.remove("seleccionada");
       });
 
-      // Seleccionar este
       boton.classList.add("seleccionado", "btn-success");
       boton.classList.remove("btn-outline-success");
       boton.textContent = "Seleccionado ✅";
@@ -72,6 +82,22 @@ function verificarDatosCompletos() {
   }
 }
 
+// Validación adicional de fechas si el usuario escribe manualmente
+function validarFechas() {
+  const llegadaInput = document.getElementById("fecha-llegada");
+  const regresoInput = document.getElementById("fecha-regreso");
+
+  const llegada = llegadaInput.value.split("/").reverse().join("-");
+  const regreso = regresoInput.value.split("/").reverse().join("-");
+
+  if (llegada && regreso && new Date(regreso) < new Date(llegada)) {
+    alert("La fecha de regreso no puede ser anterior a la de llegada.");
+    regresoInput.value = "";
+  }
+
+  verificarDatosCompletos();
+}
+
 // Botón "Ver actividades"
 function verActividades() {
   const ciudad = document.getElementById("ciudad").value;
@@ -95,7 +121,5 @@ function verActividades() {
   window.location.href = "actividades.html";
 }
 
-// Escuchas para verificar datos
+// Escuchas para otros cambios
 document.getElementById("ciudad").addEventListener("change", verificarDatosCompletos);
-document.getElementById("fecha-llegada").addEventListener("change", verificarDatosCompletos);
-document.getElementById("fecha-regreso").addEventListener("change", verificarDatosCompletos);
