@@ -84,11 +84,15 @@ function verActividades() {
     return;
   }
 
+  const tarjetaSeleccionada = hotelSeleccionado.closest(".card");
+  const imagen = tarjetaSeleccionada.querySelector("img").getAttribute("src");
+
   const datosUsuario = {
     ciudad,
     fechaLlegada,
     fechaRegreso,
-    hotel: hotelSeleccionado.closest(".card").querySelector(".card-title").textContent
+    hotel: tarjetaSeleccionada.querySelector(".card-title").textContent,
+    imagen: imagen
   };
 
   localStorage.setItem("datosReserva", JSON.stringify(datosUsuario));

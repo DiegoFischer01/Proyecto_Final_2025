@@ -4,6 +4,15 @@ body {
 }
 
 /* TARJETA ALOJAMIENTO */
+#info-viaje img {
+  width: 100%;      /* Que ocupe todo el ancho del contenedor */
+  height: auto;     /* Para mantener la proporción */
+  max-height: 400px; /* Limitás altura para que no sea gigante */
+  object-fit: cover; /* Para que no se deforme si el tamaño cambia */
+  border-radius: 0.25rem; /* Bordes redondeados si querés */
+}
+
+
 .card {
   background-color: #d9d9d9;
 }

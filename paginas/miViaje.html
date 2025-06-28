@@ -16,7 +16,7 @@
   <!-- Barra de navegación responsiva (Comienzo)-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Viaggio</a>
+      <a class="navbar-brand" href="../index.html">Viaggio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +24,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Destinos</a>
+            <a class="nav-link" href="destinos.html">Destinos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre Viaggio</a>
+            <a class="nav-link" href="sobreViaggio.html">Sobre Viaggio</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-warning nav-link text-white" href="#">Registrarse</a>
+            <a class="btn btn-warning nav-link text-white" href="registrarse.html">Registrarse</a>
           </li>
         </ul>
       </div>
@@ -41,32 +41,12 @@
   <div class="container my-5">
     <h1 class="mb-4">Mi viaje</h1>
     <div class="row">
-
       <div class="col-12 col-lg-3 col-md-4">
-        <h2 class="text-center">Alojamiento</h2>
-        <div class="card rounded-4">
-          <img src="/Imagenes/miViaje/hotel-demetrio.jpg" class="card-img-top rounded-top-4 img-fluid"
-            alt="fachada del hotel Demetrio, Olavarria" />
-          <div class="card-body d-flex flex-column">
-            <div class="flex-grow-1 d-flex flex-column justify-content-center">
-              <h5 class="card-title text-center">Hotel Demetrio</h5>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quos
-                corporis perferendis quisquam temporibus, provident alias. Quo consequatur est veniam totam ad hic iusto
-                eius aspernatur, ut illum. Ratione, totam!</p>
-            </div>
-            <div class="mt-3">
-              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <button class="btn rounded-5" type="button">Ver más</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="info-viaje"></div>
       </div>
-
       <div class="col-12 col-lg-8 col-md-7 ms-auto">
         <h2 class="text-md-end text-center pe-md-5">Actividades</h2>
-<div id="contenedor-itinerario" class="mt-3"></div>
-
+        <div id="contenedor-itinerario" class="mt-3"></div>
       </div>
     </div>
   </div>
@@ -85,9 +65,9 @@
     <button id="btnCerrarOrdenar">Cerrar</button>
   </div>
 
- <div class="contbotones">
+  <div class="contbotones">
     <a href="./actividades.html" class="boton1">Volver</a>
-</div>
+  </div>
 
   <!-- FOOTER (comienzo) -->
   <footer>
