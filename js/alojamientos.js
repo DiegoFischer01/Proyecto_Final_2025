@@ -130,6 +130,6 @@ function verActividades() {
 document.getElementById("ciudad").addEventListener("change", verificarDatosCompletos);
 document.getElementById("fecha-llegada").addEventListener("change", verificarDatosCompletos);
 document.getElementById("fecha-regreso").addEventListener("change", verificarDatosCompletos);
-=======
+
 // Escuchas para otros cambios
 
