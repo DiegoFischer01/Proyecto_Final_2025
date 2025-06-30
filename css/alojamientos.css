@@ -15,6 +15,14 @@ main {
   flex: 1;
 }
 
+main {
+  background-color: #dfdfdf79;
+  background-image: url(../Imagenes/home/lineas-grise-dos.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Tarjetas de hoteles */
 .card {
   border-radius: 10px;
