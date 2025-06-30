@@ -93,13 +93,13 @@ function mostrarItinerario() {
         contenedorItinerario.innerHTML = `<p class="text-center mt-4">No hay actividades en tu itinerario.</p>`;
         return;
     }
-  actividades.forEach(titulo => {
-    const actividad = todasLasActividades.find(act => act.titulo === titulo);
-    if (actividad) {
-      const tarjeta = document.createElement("div");
-      tarjeta.classList.add("card", "mb-3", "actividades");
+    actividades.forEach(titulo => {
+        const actividad = todasLasActividades.find(act => act.titulo === titulo);
+        if (actividad) {
+            const tarjeta = document.createElement("div");
+            tarjeta.classList.add("card", "mb-3", "actividades");
 
-      tarjeta.innerHTML = `
+            tarjeta.innerHTML = `
         <div class="row align-items-center">
           <div class="col-md-8">
             <div class="card-body">
@@ -113,9 +113,37 @@ function mostrarItinerario() {
         </div>
       `;
 
-      contenedorItinerario.appendChild(tarjeta);
-    }
-  });
+            contenedorItinerario.appendChild(tarjeta);
+        }
+    });
 }
 
 mostrarItinerario();
+
+
+/* Js de alojamiento: */
+'use strict';
+
+const datosReserva = JSON.parse(localStorage.getItem("datosReserva"));
+const contenedorInfo = document.getElementById("info-viaje");
+
+
+if (datosReserva) {
+contenedorInfo.innerHTML = `
+  <h2 class="text-center mb-4">Alojamiento</h2>
+  <div class="card mb-4 shadow p-4" style="max-width: 480px; margin: 0 auto;">
+    <h5 class="card-title text-center"> ${datosReserva.hotel}</h5>
+    <img src="${datosReserva.imagen}" class="img-fluid rounded my-3" alt="${datosReserva.hotel}">
+    <p class="card-text"><strong>Destino:</strong> ${datosReserva.ciudad}</p>
+    <div class="d-flex justify-content-between" style="gap: 2rem; padding-top: 0.5rem;">
+      <p class="card-text mb-0"><strong>Fecha de llegada:</strong> ${datosReserva.fechaLlegada}</p>
+      <p class="card-text mb-0"><strong>Fecha de regreso:</strong> ${datosReserva.fechaRegreso}</p>
+    </div>
+  </div>
+`;
+
+
+} else {
+    contenedorInfo.innerHTML = `<p class="text-center mt-4">No hay información de alojamiento seleccionada.</p>`;
+}
+

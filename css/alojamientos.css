@@ -74,12 +74,11 @@ footer {
 }
 
 .logoFooter {
-  width: 250px;
+  width: 150px;
   height: auto;
 }
 
 .divSucursales,
-.divHorarios,
 .divRedes {
   display: flex;
   flex-direction: column;
@@ -90,8 +89,7 @@ footer {
   margin: 0 20px;
 }
 
-.divSucursales p,
-.divHorarios p {
+.divSucursales p {
   margin: 5px 0;
   line-height: 1.5;
 }
@@ -127,10 +125,81 @@ footer {
   font-size: 1.2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   padding: 15px 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 30px auto;
 }
 
 #btn-ver-actividades:hover {
   background-color: #e97037;
   color: #000;
   transform: scale(1.05);
+}
+
+/* Media queries */
+@media (max-width: 1000px) {
+  .columna-imagenes {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .columnas-imagenes-contenedor {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .columna-imagenes {
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .columnas-imagenes-contenedor {
+    background-size: cover;
+  }
+
+  footer {
+    padding: 50px;
+    max-width: 1366px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .divSucursales p {
+    font-size: 10px;
+  }
+
+  .logoFooter {
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divRedes a > img {
+    object-fit: contain;
+    width: 30px;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .divSucursales p {
+    font-size: 10px;
+  }
+
+  .logoFooter {
+    width: 100px;
+  }
+
+  .divRedes {
+    flex-direction: column;
+  }
+
+  .divRedes a > img {
+    width: 30px;
+    object-fit: contain;
+  }
+
+  .columna-imagenes {
+    padding: 0;
+    padding-top: 50px;
+    row-gap: 50px;
+  }
 }
