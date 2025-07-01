@@ -1,4 +1,11 @@
 /* GENERAL */
+.a-logo img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+
 body {
   margin: 0;
 }

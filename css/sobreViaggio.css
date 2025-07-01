@@ -1,4 +1,11 @@
 /* Barra de navegación */
+.a-logo img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+
 .navbar {
     background-color: rgba(0, 0, 0, 0.5);
 }
