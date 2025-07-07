@@ -7,6 +7,11 @@ body {
     background: linear-gradient(208deg,rgba(54, 52, 52, 1) 61%, rgba(235, 100, 36, 1) 100%);
 }
 
+.swal2-shown {
+    overflow: hidden;
+    padding-right: 0 ;
+}
+
 .inicio-sesion-contenedor {
     width: 100%;
     height: 100%;
