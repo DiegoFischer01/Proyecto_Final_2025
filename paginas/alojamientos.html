@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viaggio - Destino y Alojamiento</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles_dest_aloj.css">
+    <link rel="stylesheet" href="../css/alojamientos.css">
+    <link rel="shortcut icon" href="../Imagenes/home/logo.svg" type="image/x-icon">
+
 </head>
 
 <body>
@@ -14,180 +16,271 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Viaggio</a>
+            <a class="navbar-brand" href="../index.html"> <img src="../Imagenes/home/logo.svg" alt="Logo Viaggio"
+                    style="height: 40px;">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinos</a>
+                        <a class="nav-link" href="destinos.html">Destinos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Viaggio</a>
+                        <a class="nav-link" href="sobreViaggio.html">Sobre Viaggio</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Sección de Destino -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Elige tu destino</h2>
+    <main>
 
-        <!-- Selector de ciudad -->
-        <div class="row mb-3">
-            <div class="col-12">
-                <label for="ciudad">Seleccione su ciudad:</label>
-                <select class="form-control" id="ciudad">
-                    <option value="" disabled selected>Seleccione una ciudad</option>
-                    <option value="Olavarria">Olavarria</option>
-                    <option value="Tandil">Tandil</option>
-                    <option value="Mar del Plata">Mar del Plata</option>
-                </select>
+        <!-- Sección de Destino -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Elige tu destino</h2>
+
+            <!-- Selector de ciudad -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="ciudad">Seleccione su ciudad:</label>
+                    <select class="form-control" id="ciudad">
+                        <option value="" disabled selected>Seleccione una ciudad</option>
+                        <option value="Olavarria">Olavarría</option>
+                        <option value="Tandil" disabled style="color: gray;">Tandil (próximamente)</option>
+                        <option value="Mar del Plata" disabled style="color: gray;">Mar del Plata (próximamente)
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Sección de Fechas -->
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <label for="fecha-llegada">Fecha de llegada:</label>
+                    <input type="text" class="form-control datepicker" id="fecha-llegada">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <label for="fecha-regreso">Fecha de regreso:</label>
+                    <input type="text" class="form-control datepicker" id="fecha-regreso">
+                </div>
+            </div>
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <button class="btn btn-warning btn-lg d-block mx-auto"
+                        onclick="scrollToAlojamiento()">Continuar</button>
+                </div>
             </div>
         </div>
 
-        <!-- Sección de Fechas -->
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <label for="fecha-llegada">Fecha de llegada:</label>
-                <input type="text" class="form-control datepicker" id="fecha-llegada">
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <label for="fecha-regreso">Fecha de regreso:</label>
-                <input type="text" class="form-control datepicker" id="fecha-regreso">
+        <!-- Sección de Alojamientos -->
+        <div class="container mt-5" id="seccion-alojamientos" style="display: none;">
+            <h2 class="text-center mb-4">Elige tu alojamiento</h2>
+
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Argentino.png" class="card-img-top"
+                            alt="Alojamiento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Argentino</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=1" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Casa_Josefina.png" class="card-img-top"
+                            alt="Alojamiento 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Josefina</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=2" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Centenario.png" class="card-img-top"
+                            alt="Alojamiento 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Centenario</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=3" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Demetrio.png" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Demtrio</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=4" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Riyak.png" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Riyak</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=5" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/Santa_Rosa.png" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Santa Rosa</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=6" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/rex.jpg" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Rex</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=7" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/HotelOlavarria.jpg" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Olavarria</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=8" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="../Imagenes/alojamientos/Portadas_ Hoteles/skyView.jpg" class="card-img-top"
+                            alt="Alojamiento 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Sky View</h5>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                                fugiat
+                                odio tempore.</p>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="detalle.html?id=9" class="btn btn-warning mb-0">Ver más</a>
+                                <button class="btn btn-sm btn-outline-success btn-seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="row mt-4 text-center">
-            <div class="col-12">
-                <button class="btn btn-warning btn-lg d-block mx-auto"
-                    onclick="scrollToAlojamiento()">Continuar</button>
-            </div>
-        </div>
+    </main>
+
+    <!-- Boton VER ACTIVIDADES -->
+    <div class="text-center my-5" id="contenedor-actividades" style="display: none;">
+        <button class="btn btn-lg px-5 py-3" id="btn-ver-actividades" onclick="verActividades()">Ver
+            actividades</button>
     </div>
-
-    <!-- Sección de Alojamientos -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Elige tu alojamiento</h2>
-
-        <div class="row">
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Argentino.png" class="card-img-top" alt="Alojamiento 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Argentino</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Casa_Josefina.png" class="card-img-top" alt="Alojamiento 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Casa Josefina</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Centenario.png" class="card-img-top" alt="Alojamiento 3">
-                    <div class="card-body">
-                        <h5 class="card-title"> Hotel Centenario</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Demetrio.png" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title"> Hotel Demetrio</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Riyak.png" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Riyak</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/Santa_Rosa.png" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Santa Rosa</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/rex.jpg" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Rex</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/HotelOlavarria.jpg" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Olavarria</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="/Proyecto_Final_2025/Imagenes/alojamientos/Portadas_ Hoteles/skyView.jpg" class="card-img-top" alt="Alojamiento 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Hotel Apart Sky View</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fugiat
-                            odio tempore.</p>
-                        <p class="btn btn-warning">Ver más</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
+    <!-- FOOTER -->
 
+    <!-- FOOTER -->
+ <footer class="">
+    <div class="divSucursales">
+      <p>Sucursales</p>
+      <p>Calle inventada 1234</p>
+      <p>Calle alternativa 5679</p>
+    </div>
+    <div>
+      <img src="../Imagenes/home/logo.svg" alt="Logo" class="logoFooter" />
+    </div>
+    <div class="divRedes">
+      <a href="https://www.facebook.com/?locale=es_LA" target="_blank">
+        <img src="../Imagenes/home/facebook.png" alt="Facebook" class="logosRedes" />
+      </a>
+      <a href="https://x.com/" target="_blank">
+        <img src="../Imagenes/home/twitter.png" alt="Twitter" class="logosRedes" />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="../Imagenes/home/instagram.png" alt="Instagram" class="logosRedes" />
+      </a>
+    </div>
+</footer>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="JavaScript/mainDest_Aloja.js"></script>
+    <script src="../js/alojamientos.js"></script>
+
 </body>
 
 </html>

@@ -1,37 +1,27 @@
 /* GENERAL */
+.a-logo img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
 
-html, body {
-  height: 100%;
+
+body {
   margin: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+/* TARJETA ALOJAMIENTO */
+#info-viaje img {
+  width: 100%;      /* Que ocupe todo el ancho del contenedor */
+  height: auto;     /* Para mantener la proporción */
+  max-height: 400px; /* Limitás altura para que no sea gigante */
+  object-fit: cover; /* Para que no se deforme si el tamaño cambia */
+  border-radius: 0.25rem; /* Bordes redondeados si querés */
 }
 
-.container {
-  flex: 1; 
-}
-
-
-/* TARJETA ALOJAMIENTO*/
-
-.card button {
-  background-color: #6750a4;
-  color: #fff;
-  &:hover {
-    background-color: #fa9500;
-    color: #fff;
-  }
-  &:active {
-    background-color: #fa9500 !important;
-    color: white !important;
-  }
-}
 
 .card {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .card-text {
@@ -44,10 +34,112 @@ body {
   object-fit: cover;
 }
 
+.card button {
+  background-color: #6750a4;
+  color: #fff;
+}
+
+.card button:hover {
+  background-color: #fa9500;
+  color: #fff;
+}
+
+.card button:active {
+  background-color: #fa9500 !important;
+  color: white !important;
+}
+
 /* TARJETA ACTIVIDADES */
 .actividades-img {
   padding: 0.4rem;
   height: 150px;
+  object-fit: cover;
+}
+
+/* MENÚ ORDENAR */
+#btnOrdenar {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 1001;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnOrdenar:hover {
+  background-color: #ff8c00;
+  color: white;
+}
+
+#btnOrdenar img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-ordenar {
+  position: absolute;
+  top: 140px;
+  right: 20px;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  z-index: 1000;
+}
+
+.oculto {
+  display: none;
+}
+
+#btnCerrarOrdenar {
+  margin-top: 10px;
+  background-color: #f57c00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#btnCerrarOrdenar:hover {
+  background-color: #ef6c00;
+}
+
+/* BOTÓN VOLVER */
+.contbotones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 15px 20px;
+}
+
+.boton1 {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton1:hover {
+  background-color: rgb(201, 130, 0);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* FOOTER */
@@ -65,12 +157,11 @@ footer {
 }
 
 .logoFooter {
-    width: 250px;
+    width: 150px;
     height: auto;
 }
 
 .divSucursales,
-.divHorarios,
 .divRedes {
     display: flex;
     flex-direction: column;
@@ -81,8 +172,7 @@ footer {
     margin: 0 20px;
 }
 
-.divSucursales p,
-.divHorarios p {
+.divSucursales p{
     margin: 5px 0;
     line-height: 1.5;
 }
@@ -102,4 +192,74 @@ footer {
 
 .logosRedes:hover {
     transform: scale(1.3);
+}
+
+@media (max-width: 1000px) {
+    .columna-imagenes {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .columnas-imagenes-contenedor {
+        background-size: cover;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .columna-imagenes {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .columnas-imagenes-contenedor {
+        background-size: cover;
+    }
+
+    footer {
+        padding: 50px;
+        max-width: 1366px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .divSucursales p {
+        font-size: 10px;
+    }
+
+    .logoFooter {
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divRedes a > img {
+        object-fit: contain;
+        width: 30px;
+    }
+
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .divSucursales p{
+        font-size: 10px;
+    }
+
+    .logoFooter {
+        width: 100px;
+    }
+
+    .divRedes {
+        flex-direction: column;
+    }
+    .divRedes a > img {
+        width: 30px;
+        object-fit: contain;
+    }
+
+    .columna-imagenes{
+        padding: 0;
+        padding-top: 50px;
+        row-gap: 50px;
+    }
+
 }

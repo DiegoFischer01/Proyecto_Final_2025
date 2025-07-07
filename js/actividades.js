@@ -101,17 +101,27 @@ function crearTarjeta(actividad) {
   tarjeta.className = "col-md-4";
   const actividadesAgregadas = obtenerItinerario();
   tarjeta.innerHTML = `
-    <div class="card mb-4 rounded-4">
-      <img src="${actividad.imagen}" class="card-img-top rounded-top-4" alt="${actividad.titulo}">
-      <div class="card-body">
-        <h5 class="card-title fs-3">${actividad.titulo}</h5>
-        <p class="card-text">${actividad.descripcion}</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn rounded-5" type="button">${actividadesAgregadas.includes(actividad.titulo) ? "Quitar" : "Agregar"}</button>
-        </div>
-        <p class="text-success mt-2" style="display: ${actividadesAgregadas.includes(actividad.titulo) ? "block" : "none"};">Actividad agregada al itinerario</p>
-      </div>
+    <div class="card rounded-4 h-100 w-100">
+  <img
+    src="${actividad.imagen}"
+    class="card-img-top rounded-top-4 img-fluid"
+    alt="${actividad.titulo}"
+  />
+  <div class="card-body d-flex flex-column">
+    <div class="flex-grow-1 d-flex flex-column justify-content-center">
+      <h5 class="card-title text-center">${actividad.titulo}</h5>
+      <p class="card-text text-center">${actividad.descripcion}</p>
     </div>
+
+    <div class="mt-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button class="btn rounded-5" type="button">${actividadesAgregadas.includes(actividad.titulo) ? "Quitar" : "Agregar"}</button>
+      </div>
+      <p class="text-success mt-2 text-center" style="display: ${actividadesAgregadas.includes(actividad.titulo) ? "block" : "none"};"> Actividad agregada al itinerario
+      </p>
+    </div>
+  </div>
+</div>
   `;
 
   const boton = tarjeta.querySelector("button");

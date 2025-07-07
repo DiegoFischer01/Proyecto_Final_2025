@@ -105,6 +105,8 @@ body {
     background-color: transparent;
     border-radius: 20px;
     width: 100%;
+    color: #fff;
+
 }
 
 .inputGroup label {
@@ -118,17 +120,17 @@ body {
     pointer-events: none;
     transition: all 0.3s ease;
     color: #ffffff63;
-
 }
 
 .inputGroup :is(input:focus, input:valid)~label {
-    transform: translateY(-50%) scale(1);
+    transform: translateY(-70%) scale(1);
     margin: 0em;
     margin-left: 1.3em;
     padding: 0.4em;
     color: #fff;  
     background-color: #4B4B4B;
     width: 40%;
+    height: 30px;
     border-radius: 20px;
 }
 
