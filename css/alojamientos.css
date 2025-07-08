@@ -212,6 +212,7 @@ footer {
     grid-template-areas: 
         "principal principal grid1"
         "principal principal grid2"
+        "grid3 grid4 grid2"
         "grid3 grid4 grid2";
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: 150px 150px 100px;
@@ -302,4 +303,26 @@ footer {
 
 .servicios p, ul {
     font-size: 18px;
+}
+
+.btn-contenedor {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 20px;
+}
+
+.boton-reservar {
+  transform: translate(-100px, 30px);
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #EB6424;
+  -webkit-box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 5px 0px rgba(253, 165, 0, 0.75);
+  color: white;
+  cursor: pointer;
 }

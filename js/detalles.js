@@ -52,12 +52,7 @@ fetch("../json/alojamientos.json")
                 </div>
 
                 
-            </div>
-
-                <div class="galeria-descripcion">
-                </div>
-        
-`;
+            </div>`;
             
 
     })

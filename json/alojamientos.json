@@ -4,10 +4,10 @@
     "nombre": "Hotel Argentino",
     "imagen": [
         {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Hotel tradicional en pleno centro de Olavarría, ideal para viajes de trabajo o descanso.",
     "personas": 2,
@@ -20,11 +20,11 @@
     "id": 2,
     "nombre": "Casa Josefina",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Casa_Josefina.png", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Casa amplia y acogedora en zona residencial, perfecta para familias o grupos.",
     "personas": 6,
@@ -37,11 +37,11 @@
     "id": 3,
     "nombre": "Hotel Centenario",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Centenario.png", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Moderno hotel 3 estrellas con excelente ubicación y atención personalizada.",
     "personas": 3,
@@ -54,11 +54,11 @@
     "id": 4,
     "nombre": "Hotel Demetrio",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Demetrio.png", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Hotel boutique con diseño elegante y desayuno continental incluido.",
     "personas": 2,
@@ -71,11 +71,11 @@
     "id": 5,
     "nombre": "Hotel Riyak",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Riyak.png", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Hotel con habitaciones amplias para parejas o grupos, cerca de la terminal.",
     "personas": 5,
@@ -88,28 +88,28 @@
     "id": 6,
     "nombre": "Hotel Santa Rosa",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/Santa_Rosa.png", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Hotel 3★ superior con spa y gimnasio, ideal para descansar con comodidad.",
     "personas": 2,
     "precio": 25000,
     "ubicacion": "Vicente López 2956, Olavarría",
     "servicios": ["WiFi", "Spa", "Gimnasio", "Pileta climatizada", "Restaurante"],
-    "puntuacion": 4.6
+    "puntuacion": 3
 },
 {
     "id": 7,
     "nombre": "Hotel Rex",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/rex.jpg", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Hotel económico con servicios básicos y ubicación céntrica.",
     "personas": 2,
@@ -122,11 +122,11 @@
     "id": 8,
     "nombre": "Hotel Olavarría",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/HotelOlavarria.jpg", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Alojamiento tradicional con restaurante propio y habitaciones familiares.",
     "personas": 4,
@@ -139,11 +139,11 @@
     "id": 9,
     "nombre": "Sky View",
     "imagen": [
-        {"url": "./img/Argentino.png", "clases": "principal"},
-        {"url": "./img/habitaciones/h1.jpg", "clases": "grid1"},
-        {"url": "./img/habitaciones/h2.jpg", "clases": "grid2"},
-        {"url": "./img/habitaciones/h3.jpg", "clases": "grid3"},
-        {"url": "./img/habitaciones/h4.jpg", "clases": "grid4"}
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/skyView.jpg", "clases": "principal"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion3.jpg", "clases": "grid1"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion2.webp", "clases": "grid2"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion4.jpg", "clases": "grid3"},
+        {"url": "../Imagenes/alojamientos/Portadas_ Hoteles/detallesImg/habitacion1.jpg", "clases": "grid4"}
     ],
     "descripcion": "Apart hotel con departamentos equipados y vistas panorámicas a la ciudad.",
     "personas": 3,
