@@ -25,40 +25,37 @@
                     <div class="circle circle4"></div>
                     <h2>Registrate</h2> 
                 </div>
-                    <form class="inputGroup" id="formulario">
+                    <form class="inputGroup" id="formRegistro">
                         <div class="inputBox">
-                            <input type="text" id="nombre" required="" autocomplete="off" required>
+                            <input type="text" id="regNombre" required autocomplete="off" required>
                             <label for="name">Nombre/s</label>
                         </div>
 
                         <div class="inputBox">
-                            <input type="text" id="apellido" required="" autocomplete="off">
+                            <input type="text" id="regApellido" required autocomplete="off">
                             <label for="name">Apellido/s</label>
                         </div>
 
                         <div class="inputBox">
-                            <input type="email" id="email" required="" autocomplete="off">
+                            <input type="email" id="regEmail" required autocomplete="off">
                             <label for="name">Correo electronico</label>
                         </div>
 
                         <div class="inputBox">
-                            <input type="password" id="contraseña" required="" autocomplete="off">
+                            <input type="Password" id="regContraseña" required autocomplete="off">
                             <label for="name">Contraseña</label>
                         </div>
 
                         <div class="inputBox">
-                            <input type="password" id="confirmarContraseña" required="" autocomplete="off">
+                            <input type="password" id="regContraseña2" required autocomplete="off">
                             <label for="name">Confirmar contraseña</label>
                         </div>
 
                         <div class="btn-registrarse-contenedor">
-                            <button type="submit" id="btn-registrarse">Registrarse</button>
+                            <button type="button" id="btn-registrarse" >Registrarse</button>
                         </div>
                     </form>
 
-
-
-                    <p id="msgError" class="p-error-mensaje"></p>
 
                     <div class="a-iniciar-contenedor">
                         <a href="../index.html">< Volver a inicio</a>
@@ -85,7 +82,8 @@
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/registrarse.js"></script>
+    <script src="../js/crud.js" defer></script>
+
 
 
 </html>
