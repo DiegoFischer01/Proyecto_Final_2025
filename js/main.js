@@ -262,3 +262,17 @@ window.addEventListener("scroll", () => {
     const offsetX = scrollY * -0.6;
     title2.style.transform = `translateX(${offsetX}px)`
 });
+
+// Diego: agregue esto para que ande la verificacion del login en el btn "ver actividades"
+function verificarSesionAntesDeActividades() {
+  const estaLogueado = localStorage.getItem("usuarioLogueado") === "true";
+
+  if (!estaLogueado) {
+    alert("Necesitás estar registrado para ver las actividades.");
+    window.location.href = "registro.html"; // o "login.html", según tu flujo
+    return;
+  }
+
+  // Si está logueado, redirigir normalmente
+  window.location.href = "actividades.html";
+}
